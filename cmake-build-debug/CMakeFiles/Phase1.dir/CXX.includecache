@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
+iostream
+-
+bits/stdc++.h
+-
+Node.h
+C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
+
+C:/Users/makram99/CLionProjects/Phase1/Helper/Node.cpp
+Node.h
+C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
+utility
+-
+Edge.h
+C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
+
+C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
+iostream
+-
+bits/stdc++.h
+-
+Edge.h
+C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
+

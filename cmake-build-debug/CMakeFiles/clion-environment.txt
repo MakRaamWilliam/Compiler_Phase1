@@ -1,0 +1,4 @@
+ToolSet: w64 6.0 (local)@E:\New folder (3)MG\mingw32
+Options: 
+
+Options:

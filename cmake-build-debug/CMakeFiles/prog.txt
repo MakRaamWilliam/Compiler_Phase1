@@ -1,0 +1,5 @@
+int sum , count , pass , mnt;
+while ((pass != 10 && count <= sum) || pass != mnt)
+{
+pass = pass + 1 ;
+}
