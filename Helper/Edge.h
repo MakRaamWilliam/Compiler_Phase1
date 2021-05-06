@@ -1,5 +1,5 @@
-#ifndef LEXICAL_ANALYZER_GENERATOR_EDGE_H
-#define LEXICAL_ANALYZER_GENERATOR_EDGE_H
+#ifndef EDGE_H
+#define EDGE_H
 
 #include <iostream>
 #include <bits/stdc++.h>
@@ -56,4 +56,4 @@ private:
 };
 
 
-#endif //LEXICAL_ANALYZER_GENERATOR_EDGE_H
+#endif

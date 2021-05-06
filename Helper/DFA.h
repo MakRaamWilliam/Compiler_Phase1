@@ -1,5 +1,5 @@
-#ifndef LEXICAL_ANALYZER_GENERATOR_DFA_H
-#define LEXICAL_ANALYZER_GENERATOR_DFA_H
+#ifndef DFA_H
+#define DFA_H
 
 #include <map>
 #include "NFA.h"
@@ -22,17 +22,7 @@ private:
     map<Node *, map<char, Node *>> DTable;
     Node *nullNode = new Node("null", false);
 
-    /**
-     Sim:
-     map<   Node*        ,        map<char , Node*>    >
-            dfaStates
-                             a   b   c   d   e ...    <----- alphabet
-               A             B   -   -   E   - ...    <----- go from A to B by input a.
-               .
-               .
-               .
-     **/
 
 };
 
-#endif //LEXICAL_ANALYZER_GENERATOR_DFA_H
+#endif

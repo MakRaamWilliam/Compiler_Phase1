@@ -1,5 +1,4 @@
-#ifndef LEXICAL_ANALYZER_GENERATOR_SCANNER_H
-#define LEXICAL_ANALYZER_GENERATOR_SCANNER_H
+#ifndef SCANNER_H
 
 #include "DFA.h"
 
@@ -21,4 +20,4 @@ private:
 };
 
 
-#endif //LEXICAL_ANALYZER_GENERATOR_SCANNER_H
+#endif

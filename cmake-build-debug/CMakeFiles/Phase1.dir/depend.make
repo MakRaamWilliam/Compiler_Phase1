@@ -25,16 +25,25 @@ CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj: ../Helper/Edge.cpp
 CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj: ../Helper/Edge.h
 CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj: ../Helper/Node.h
 
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj: ../Helper/LexicalRule.h
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj: ../Helper/LexicalRuleBuilder.cpp
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj: ../Helper/LexicalRuleBuilder.h
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj: ../Helper/LexBulider.cpp
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj: ../Helper/LexBulider.h
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj: ../Helper/LexicalRule.h
 
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: ../Helper/DFA.h
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: ../Helper/Edge.h
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: ../Helper/Minimizer.cpp
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: ../Helper/Minimizer.h
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: ../Helper/NFA.h
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: ../Helper/Node.h
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/DFA.h
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/Edge.h
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/LexBulider.h
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/LexRules.cpp
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/LexRules.h
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/LexicalRule.h
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/NFA.h
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/Node.h
+
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: ../Helper/DFA.h
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: ../Helper/Edge.h
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: ../Helper/Minimiztion.cpp
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: ../Helper/Minimiztion.h
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: ../Helper/NFA.h
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: ../Helper/Node.h
 
 CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj: ../Helper/Edge.h
 CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj: ../Helper/NFA.cpp
@@ -44,15 +53,6 @@ CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj: ../Helper/Node.h
 CMakeFiles/Phase1.dir/Helper/Node.cpp.obj: ../Helper/Edge.h
 CMakeFiles/Phase1.dir/Helper/Node.cpp.obj: ../Helper/Node.cpp
 CMakeFiles/Phase1.dir/Helper/Node.cpp.obj: ../Helper/Node.h
-
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/DFA.h
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/Edge.h
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/LexicalRule.h
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/LexicalRuleBuilder.h
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/NFA.h
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/Node.h
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/ReadLexicalRulesFile.cpp
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/ReadLexicalRulesFile.h
 
 CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj: ../Helper/DFA.h
 CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj: ../Helper/Edge.h
@@ -65,12 +65,12 @@ CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Builder.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Converter.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/DFA.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Edge.h
+CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/LexBulider.h
+CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/LexRules.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/LexicalRule.h
-CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/LexicalRuleBuilder.h
-CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Minimizer.h
+CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Minimiztion.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/NFA.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Node.h
-CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ReadLexicalRulesFile.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Scanner.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../main.cpp
 

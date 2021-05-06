@@ -25,15 +25,24 @@ CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj
  C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.cpp
  C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.cpp
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRuleBuilder.cpp
- C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRuleBuilder.h
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj
  C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/Minimizer.cpp
- C:/Users/makram99/CLionProjects/Phase1/Helper/Minimizer.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.cpp
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj
+ C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.cpp
+ C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
 CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj
@@ -45,15 +54,6 @@ CMakeFiles/Phase1.dir/Helper/Node.cpp.obj
  C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Node.cpp
  C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj
- C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRuleBuilder.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/ReadLexicalRulesFile.cpp
- C:/Users/makram99/CLionProjects/Phase1/Helper/ReadLexicalRulesFile.h
 CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj
  C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
@@ -66,11 +66,11 @@ CMakeFiles/Phase1.dir/main.cpp.obj
  C:/Users/makram99/CLionProjects/Phase1/Helper/Converter.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRuleBuilder.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/Minimizer.h
+ C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
- C:/Users/makram99/CLionProjects/Phase1/Helper/ReadLexicalRulesFile.h
  C:/Users/makram99/CLionProjects/Phase1/Helper/Scanner.h
  C:/Users/makram99/CLionProjects/Phase1/main.cpp

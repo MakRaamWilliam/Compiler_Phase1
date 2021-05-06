@@ -153,44 +153,44 @@ CMakeFiles/Phase1.dir/Helper/DFA.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/DFA.cpp.s"
 	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\DFA.cpp -o CMakeFiles\Phase1.dir\Helper\DFA.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj: ../Helper/ReadLexicalRulesFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\ReadLexicalRulesFile.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\ReadLexicalRulesFile.cpp
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/LexRules.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\LexRules.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\LexRules.cpp
 
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\ReadLexicalRulesFile.cpp > CMakeFiles\Phase1.dir\Helper\ReadLexicalRulesFile.cpp.i
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/LexRules.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\LexRules.cpp > CMakeFiles\Phase1.dir\Helper\LexRules.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\ReadLexicalRulesFile.cpp -o CMakeFiles\Phase1.dir\Helper\ReadLexicalRulesFile.cpp.s
+CMakeFiles/Phase1.dir/Helper/LexRules.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/LexRules.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\LexRules.cpp -o CMakeFiles\Phase1.dir\Helper\LexRules.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj: ../Helper/LexicalRuleBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\LexicalRuleBuilder.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\LexicalRuleBuilder.cpp
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj: ../Helper/LexBulider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\LexBulider.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\LexBulider.cpp
 
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\LexicalRuleBuilder.cpp > CMakeFiles\Phase1.dir\Helper\LexicalRuleBuilder.cpp.i
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\LexBulider.cpp > CMakeFiles\Phase1.dir\Helper\LexBulider.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\LexicalRuleBuilder.cpp -o CMakeFiles\Phase1.dir\Helper\LexicalRuleBuilder.cpp.s
+CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\LexBulider.cpp -o CMakeFiles\Phase1.dir\Helper\LexBulider.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj: ../Helper/Minimizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\Minimizer.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\Minimizer.cpp
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj: ../Helper/Minimiztion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\Minimiztion.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\Minimiztion.cpp
 
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\Minimizer.cpp > CMakeFiles\Phase1.dir\Helper\Minimizer.cpp.i
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\Minimiztion.cpp > CMakeFiles\Phase1.dir\Helper\Minimiztion.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\Minimizer.cpp -o CMakeFiles\Phase1.dir\Helper\Minimizer.cpp.s
+CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\Minimiztion.cpp -o CMakeFiles\Phase1.dir\Helper\Minimiztion.cpp.s
 
 CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj: CMakeFiles/Phase1.dir/flags.make
 CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj: ../Helper/Converter.cpp
@@ -226,9 +226,9 @@ Phase1_OBJECTS = \
 "CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj"
 
@@ -241,9 +241,9 @@ Phase1.exe: CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/build.make

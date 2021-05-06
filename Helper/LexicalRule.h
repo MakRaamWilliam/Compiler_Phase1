@@ -1,5 +1,5 @@
-#ifndef LEXICAL_ANALYZER_GENERATOR_LEXICALRULE_H
-#define LEXICAL_ANALYZER_GENERATOR_LEXICALRULE_H
+#ifndef LEXICALRULE_H
+#define LEXICALRULE_H
 
 #include <iostream>
 #include <bits/stdc++.h>
@@ -87,4 +87,4 @@ private:
 
 };
 
-#endif //LEXICAL_ANALYZER_GENERATOR_LEXICALRULE_H
+#endif

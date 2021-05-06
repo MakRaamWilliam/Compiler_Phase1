@@ -1,13 +1,8 @@
-letter = a-z|A-Z
-digit = 0-9
-{ boolean int float}
-id: letter (letter|digit)*
-digits = digit+
-num: digit+ | digit+ . digits ( \L | E digits)
-relop: \=\= | !\= | > | >\= | < | <\=
-{ if else while true false}
-assign: =
-[; , \( \) { } \: \*]
-addop: \+ | -
-mulop: \* | /
-logop: \|\| | &&
+int sum , count , pass , mnt; 
+while (pass !=10)
+{
+if(pass <= 50)
+pass = pass + 1 ;
+else
+pass = pass --;
+} ((boolean)

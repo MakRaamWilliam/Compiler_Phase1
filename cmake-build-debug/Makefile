@@ -249,59 +249,86 @@ Helper/Edge.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Edge.cpp.s
 .PHONY : Helper/Edge.cpp.s
 
-Helper/LexicalRuleBuilder.obj: Helper/LexicalRuleBuilder.cpp.obj
+Helper/LexBulider.obj: Helper/LexBulider.cpp.obj
 
-.PHONY : Helper/LexicalRuleBuilder.obj
-
-# target to build an object file
-Helper/LexicalRuleBuilder.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.obj
-.PHONY : Helper/LexicalRuleBuilder.cpp.obj
-
-Helper/LexicalRuleBuilder.i: Helper/LexicalRuleBuilder.cpp.i
-
-.PHONY : Helper/LexicalRuleBuilder.i
-
-# target to preprocess a source file
-Helper/LexicalRuleBuilder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.i
-.PHONY : Helper/LexicalRuleBuilder.cpp.i
-
-Helper/LexicalRuleBuilder.s: Helper/LexicalRuleBuilder.cpp.s
-
-.PHONY : Helper/LexicalRuleBuilder.s
-
-# target to generate assembly for a file
-Helper/LexicalRuleBuilder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexicalRuleBuilder.cpp.s
-.PHONY : Helper/LexicalRuleBuilder.cpp.s
-
-Helper/Minimizer.obj: Helper/Minimizer.cpp.obj
-
-.PHONY : Helper/Minimizer.obj
+.PHONY : Helper/LexBulider.obj
 
 # target to build an object file
-Helper/Minimizer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.obj
-.PHONY : Helper/Minimizer.cpp.obj
+Helper/LexBulider.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj
+.PHONY : Helper/LexBulider.cpp.obj
 
-Helper/Minimizer.i: Helper/Minimizer.cpp.i
+Helper/LexBulider.i: Helper/LexBulider.cpp.i
 
-.PHONY : Helper/Minimizer.i
+.PHONY : Helper/LexBulider.i
 
 # target to preprocess a source file
-Helper/Minimizer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.i
-.PHONY : Helper/Minimizer.cpp.i
+Helper/LexBulider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.i
+.PHONY : Helper/LexBulider.cpp.i
 
-Helper/Minimizer.s: Helper/Minimizer.cpp.s
+Helper/LexBulider.s: Helper/LexBulider.cpp.s
 
-.PHONY : Helper/Minimizer.s
+.PHONY : Helper/LexBulider.s
 
 # target to generate assembly for a file
-Helper/Minimizer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Minimizer.cpp.s
-.PHONY : Helper/Minimizer.cpp.s
+Helper/LexBulider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.s
+.PHONY : Helper/LexBulider.cpp.s
+
+Helper/LexRules.obj: Helper/LexRules.cpp.obj
+
+.PHONY : Helper/LexRules.obj
+
+# target to build an object file
+Helper/LexRules.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj
+.PHONY : Helper/LexRules.cpp.obj
+
+Helper/LexRules.i: Helper/LexRules.cpp.i
+
+.PHONY : Helper/LexRules.i
+
+# target to preprocess a source file
+Helper/LexRules.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexRules.cpp.i
+.PHONY : Helper/LexRules.cpp.i
+
+Helper/LexRules.s: Helper/LexRules.cpp.s
+
+.PHONY : Helper/LexRules.s
+
+# target to generate assembly for a file
+Helper/LexRules.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexRules.cpp.s
+.PHONY : Helper/LexRules.cpp.s
+
+Helper/Minimiztion.obj: Helper/Minimiztion.cpp.obj
+
+.PHONY : Helper/Minimiztion.obj
+
+# target to build an object file
+Helper/Minimiztion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj
+.PHONY : Helper/Minimiztion.cpp.obj
+
+Helper/Minimiztion.i: Helper/Minimiztion.cpp.i
+
+.PHONY : Helper/Minimiztion.i
+
+# target to preprocess a source file
+Helper/Minimiztion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.i
+.PHONY : Helper/Minimiztion.cpp.i
+
+Helper/Minimiztion.s: Helper/Minimiztion.cpp.s
+
+.PHONY : Helper/Minimiztion.s
+
+# target to generate assembly for a file
+Helper/Minimiztion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.s
+.PHONY : Helper/Minimiztion.cpp.s
 
 Helper/NFA.obj: Helper/NFA.cpp.obj
 
@@ -356,33 +383,6 @@ Helper/Node.s: Helper/Node.cpp.s
 Helper/Node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Node.cpp.s
 .PHONY : Helper/Node.cpp.s
-
-Helper/ReadLexicalRulesFile.obj: Helper/ReadLexicalRulesFile.cpp.obj
-
-.PHONY : Helper/ReadLexicalRulesFile.obj
-
-# target to build an object file
-Helper/ReadLexicalRulesFile.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.obj
-.PHONY : Helper/ReadLexicalRulesFile.cpp.obj
-
-Helper/ReadLexicalRulesFile.i: Helper/ReadLexicalRulesFile.cpp.i
-
-.PHONY : Helper/ReadLexicalRulesFile.i
-
-# target to preprocess a source file
-Helper/ReadLexicalRulesFile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.i
-.PHONY : Helper/ReadLexicalRulesFile.cpp.i
-
-Helper/ReadLexicalRulesFile.s: Helper/ReadLexicalRulesFile.cpp.s
-
-.PHONY : Helper/ReadLexicalRulesFile.s
-
-# target to generate assembly for a file
-Helper/ReadLexicalRulesFile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadLexicalRulesFile.cpp.s
-.PHONY : Helper/ReadLexicalRulesFile.cpp.s
 
 Helper/Scanner.obj: Helper/Scanner.cpp.obj
 
@@ -459,21 +459,21 @@ help:
 	@echo ... Helper/Edge.obj
 	@echo ... Helper/Edge.i
 	@echo ... Helper/Edge.s
-	@echo ... Helper/LexicalRuleBuilder.obj
-	@echo ... Helper/LexicalRuleBuilder.i
-	@echo ... Helper/LexicalRuleBuilder.s
-	@echo ... Helper/Minimizer.obj
-	@echo ... Helper/Minimizer.i
-	@echo ... Helper/Minimizer.s
+	@echo ... Helper/LexBulider.obj
+	@echo ... Helper/LexBulider.i
+	@echo ... Helper/LexBulider.s
+	@echo ... Helper/LexRules.obj
+	@echo ... Helper/LexRules.i
+	@echo ... Helper/LexRules.s
+	@echo ... Helper/Minimiztion.obj
+	@echo ... Helper/Minimiztion.i
+	@echo ... Helper/Minimiztion.s
 	@echo ... Helper/NFA.obj
 	@echo ... Helper/NFA.i
 	@echo ... Helper/NFA.s
 	@echo ... Helper/Node.obj
 	@echo ... Helper/Node.i
 	@echo ... Helper/Node.s
-	@echo ... Helper/ReadLexicalRulesFile.obj
-	@echo ... Helper/ReadLexicalRulesFile.i
-	@echo ... Helper/ReadLexicalRulesFile.s
 	@echo ... Helper/Scanner.obj
 	@echo ... Helper/Scanner.i
 	@echo ... Helper/Scanner.s

@@ -104,19 +104,25 @@
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h">
 			<Option target="Phase1"/>
 		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.cpp">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.cpp">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.h">
+			<Option target="Phase1"/>
+		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRuleBuilder.cpp">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.cpp">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRuleBuilder.h">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Minimizer.cpp">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Minimizer.h">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.h">
 			<Option target="Phase1"/>
 		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.cpp">
@@ -129,12 +135,6 @@
 			<Option target="Phase1"/>
 		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/ReadLexicalRulesFile.cpp">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/ReadLexicalRulesFile.h">
 			<Option target="Phase1"/>
 		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Scanner.cpp">

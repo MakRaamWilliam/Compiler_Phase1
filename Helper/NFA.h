@@ -1,5 +1,5 @@
-#ifndef LEXICAL_ANALYZER_GENERATOR_NFA_H
-#define LEXICAL_ANALYZER_GENERATOR_NFA_H
+#ifndef NFA_H
+#define NFA_H
 
 #include "Node.h"
 
@@ -27,4 +27,4 @@ private:
 };
 
 
-#endif //LEXICAL_ANALYZER_GENERATOR_NFA_H
+#endif 

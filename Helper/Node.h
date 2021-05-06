@@ -1,5 +1,5 @@
-#ifndef LEXICAL_ANALYZER_GENERATOR_NODE_H
-#define LEXICAL_ANALYZER_GENERATOR_NODE_H
+#ifndef NODE_H
+#define NODE_H
 
 #include <iostream>
 #include <bits/stdc++.h>
@@ -39,4 +39,4 @@ public:
 };
 
 
-#endif //LEXICAL_ANALYZER_GENERATOR_NODE_H
+#endif
