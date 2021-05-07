@@ -141,86 +141,32 @@ Phase1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/build
 .PHONY : Phase1/fast
 
-Helper/Builder.obj: Helper/Builder.cpp.obj
+Helper/DfaGraph.obj: Helper/DfaGraph.cpp.obj
 
-.PHONY : Helper/Builder.obj
-
-# target to build an object file
-Helper/Builder.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj
-.PHONY : Helper/Builder.cpp.obj
-
-Helper/Builder.i: Helper/Builder.cpp.i
-
-.PHONY : Helper/Builder.i
-
-# target to preprocess a source file
-Helper/Builder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Builder.cpp.i
-.PHONY : Helper/Builder.cpp.i
-
-Helper/Builder.s: Helper/Builder.cpp.s
-
-.PHONY : Helper/Builder.s
-
-# target to generate assembly for a file
-Helper/Builder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Builder.cpp.s
-.PHONY : Helper/Builder.cpp.s
-
-Helper/Converter.obj: Helper/Converter.cpp.obj
-
-.PHONY : Helper/Converter.obj
+.PHONY : Helper/DfaGraph.obj
 
 # target to build an object file
-Helper/Converter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj
-.PHONY : Helper/Converter.cpp.obj
+Helper/DfaGraph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.obj
+.PHONY : Helper/DfaGraph.cpp.obj
 
-Helper/Converter.i: Helper/Converter.cpp.i
+Helper/DfaGraph.i: Helper/DfaGraph.cpp.i
 
-.PHONY : Helper/Converter.i
-
-# target to preprocess a source file
-Helper/Converter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Converter.cpp.i
-.PHONY : Helper/Converter.cpp.i
-
-Helper/Converter.s: Helper/Converter.cpp.s
-
-.PHONY : Helper/Converter.s
-
-# target to generate assembly for a file
-Helper/Converter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Converter.cpp.s
-.PHONY : Helper/Converter.cpp.s
-
-Helper/DFA.obj: Helper/DFA.cpp.obj
-
-.PHONY : Helper/DFA.obj
-
-# target to build an object file
-Helper/DFA.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj
-.PHONY : Helper/DFA.cpp.obj
-
-Helper/DFA.i: Helper/DFA.cpp.i
-
-.PHONY : Helper/DFA.i
+.PHONY : Helper/DfaGraph.i
 
 # target to preprocess a source file
-Helper/DFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/DFA.cpp.i
-.PHONY : Helper/DFA.cpp.i
+Helper/DfaGraph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.i
+.PHONY : Helper/DfaGraph.cpp.i
 
-Helper/DFA.s: Helper/DFA.cpp.s
+Helper/DfaGraph.s: Helper/DfaGraph.cpp.s
 
-.PHONY : Helper/DFA.s
+.PHONY : Helper/DfaGraph.s
 
 # target to generate assembly for a file
-Helper/DFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/DFA.cpp.s
-.PHONY : Helper/DFA.cpp.s
+Helper/DfaGraph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.s
+.PHONY : Helper/DfaGraph.cpp.s
 
 Helper/Edge.obj: Helper/Edge.cpp.obj
 
@@ -276,32 +222,32 @@ Helper/LexBulider.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.s
 .PHONY : Helper/LexBulider.cpp.s
 
-Helper/LexRules.obj: Helper/LexRules.cpp.obj
+Helper/MakeGraph.obj: Helper/MakeGraph.cpp.obj
 
-.PHONY : Helper/LexRules.obj
+.PHONY : Helper/MakeGraph.obj
 
 # target to build an object file
-Helper/LexRules.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj
-.PHONY : Helper/LexRules.cpp.obj
+Helper/MakeGraph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.obj
+.PHONY : Helper/MakeGraph.cpp.obj
 
-Helper/LexRules.i: Helper/LexRules.cpp.i
+Helper/MakeGraph.i: Helper/MakeGraph.cpp.i
 
-.PHONY : Helper/LexRules.i
+.PHONY : Helper/MakeGraph.i
 
 # target to preprocess a source file
-Helper/LexRules.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexRules.cpp.i
-.PHONY : Helper/LexRules.cpp.i
+Helper/MakeGraph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.i
+.PHONY : Helper/MakeGraph.cpp.i
 
-Helper/LexRules.s: Helper/LexRules.cpp.s
+Helper/MakeGraph.s: Helper/MakeGraph.cpp.s
 
-.PHONY : Helper/LexRules.s
+.PHONY : Helper/MakeGraph.s
 
 # target to generate assembly for a file
-Helper/LexRules.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/LexRules.cpp.s
-.PHONY : Helper/LexRules.cpp.s
+Helper/MakeGraph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.s
+.PHONY : Helper/MakeGraph.cpp.s
 
 Helper/Minimiztion.obj: Helper/Minimiztion.cpp.obj
 
@@ -330,32 +276,59 @@ Helper/Minimiztion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.s
 .PHONY : Helper/Minimiztion.cpp.s
 
-Helper/NFA.obj: Helper/NFA.cpp.obj
+Helper/NfaGraph.obj: Helper/NfaGraph.cpp.obj
 
-.PHONY : Helper/NFA.obj
+.PHONY : Helper/NfaGraph.obj
 
 # target to build an object file
-Helper/NFA.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj
-.PHONY : Helper/NFA.cpp.obj
+Helper/NfaGraph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj
+.PHONY : Helper/NfaGraph.cpp.obj
 
-Helper/NFA.i: Helper/NFA.cpp.i
+Helper/NfaGraph.i: Helper/NfaGraph.cpp.i
 
-.PHONY : Helper/NFA.i
+.PHONY : Helper/NfaGraph.i
 
 # target to preprocess a source file
-Helper/NFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NFA.cpp.i
-.PHONY : Helper/NFA.cpp.i
+Helper/NfaGraph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.i
+.PHONY : Helper/NfaGraph.cpp.i
 
-Helper/NFA.s: Helper/NFA.cpp.s
+Helper/NfaGraph.s: Helper/NfaGraph.cpp.s
 
-.PHONY : Helper/NFA.s
+.PHONY : Helper/NfaGraph.s
 
 # target to generate assembly for a file
-Helper/NFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NFA.cpp.s
-.PHONY : Helper/NFA.cpp.s
+Helper/NfaGraph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.s
+.PHONY : Helper/NfaGraph.cpp.s
+
+Helper/NfaToDfa.obj: Helper/NfaToDfa.cpp.obj
+
+.PHONY : Helper/NfaToDfa.obj
+
+# target to build an object file
+Helper/NfaToDfa.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj
+.PHONY : Helper/NfaToDfa.cpp.obj
+
+Helper/NfaToDfa.i: Helper/NfaToDfa.cpp.i
+
+.PHONY : Helper/NfaToDfa.i
+
+# target to preprocess a source file
+Helper/NfaToDfa.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.i
+.PHONY : Helper/NfaToDfa.cpp.i
+
+Helper/NfaToDfa.s: Helper/NfaToDfa.cpp.s
+
+.PHONY : Helper/NfaToDfa.s
+
+# target to generate assembly for a file
+Helper/NfaToDfa.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.s
+.PHONY : Helper/NfaToDfa.cpp.s
 
 Helper/Node.obj: Helper/Node.cpp.obj
 
@@ -384,32 +357,59 @@ Helper/Node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Node.cpp.s
 .PHONY : Helper/Node.cpp.s
 
-Helper/Scanner.obj: Helper/Scanner.cpp.obj
+Helper/ReadProg.obj: Helper/ReadProg.cpp.obj
 
-.PHONY : Helper/Scanner.obj
+.PHONY : Helper/ReadProg.obj
 
 # target to build an object file
-Helper/Scanner.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj
-.PHONY : Helper/Scanner.cpp.obj
+Helper/ReadProg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj
+.PHONY : Helper/ReadProg.cpp.obj
 
-Helper/Scanner.i: Helper/Scanner.cpp.i
+Helper/ReadProg.i: Helper/ReadProg.cpp.i
 
-.PHONY : Helper/Scanner.i
+.PHONY : Helper/ReadProg.i
 
 # target to preprocess a source file
-Helper/Scanner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Scanner.cpp.i
-.PHONY : Helper/Scanner.cpp.i
+Helper/ReadProg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.i
+.PHONY : Helper/ReadProg.cpp.i
 
-Helper/Scanner.s: Helper/Scanner.cpp.s
+Helper/ReadProg.s: Helper/ReadProg.cpp.s
 
-.PHONY : Helper/Scanner.s
+.PHONY : Helper/ReadProg.s
 
 # target to generate assembly for a file
-Helper/Scanner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Scanner.cpp.s
-.PHONY : Helper/Scanner.cpp.s
+Helper/ReadProg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.s
+.PHONY : Helper/ReadProg.cpp.s
+
+Helper/ReadRules.obj: Helper/ReadRules.cpp.obj
+
+.PHONY : Helper/ReadRules.obj
+
+# target to build an object file
+Helper/ReadRules.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj
+.PHONY : Helper/ReadRules.cpp.obj
+
+Helper/ReadRules.i: Helper/ReadRules.cpp.i
+
+.PHONY : Helper/ReadRules.i
+
+# target to preprocess a source file
+Helper/ReadRules.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.i
+.PHONY : Helper/ReadRules.cpp.i
+
+Helper/ReadRules.s: Helper/ReadRules.cpp.s
+
+.PHONY : Helper/ReadRules.s
+
+# target to generate assembly for a file
+Helper/ReadRules.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.s
+.PHONY : Helper/ReadRules.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -447,36 +447,36 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Phase1
-	@echo ... Helper/Builder.obj
-	@echo ... Helper/Builder.i
-	@echo ... Helper/Builder.s
-	@echo ... Helper/Converter.obj
-	@echo ... Helper/Converter.i
-	@echo ... Helper/Converter.s
-	@echo ... Helper/DFA.obj
-	@echo ... Helper/DFA.i
-	@echo ... Helper/DFA.s
+	@echo ... Helper/DfaGraph.obj
+	@echo ... Helper/DfaGraph.i
+	@echo ... Helper/DfaGraph.s
 	@echo ... Helper/Edge.obj
 	@echo ... Helper/Edge.i
 	@echo ... Helper/Edge.s
 	@echo ... Helper/LexBulider.obj
 	@echo ... Helper/LexBulider.i
 	@echo ... Helper/LexBulider.s
-	@echo ... Helper/LexRules.obj
-	@echo ... Helper/LexRules.i
-	@echo ... Helper/LexRules.s
+	@echo ... Helper/MakeGraph.obj
+	@echo ... Helper/MakeGraph.i
+	@echo ... Helper/MakeGraph.s
 	@echo ... Helper/Minimiztion.obj
 	@echo ... Helper/Minimiztion.i
 	@echo ... Helper/Minimiztion.s
-	@echo ... Helper/NFA.obj
-	@echo ... Helper/NFA.i
-	@echo ... Helper/NFA.s
+	@echo ... Helper/NfaGraph.obj
+	@echo ... Helper/NfaGraph.i
+	@echo ... Helper/NfaGraph.s
+	@echo ... Helper/NfaToDfa.obj
+	@echo ... Helper/NfaToDfa.i
+	@echo ... Helper/NfaToDfa.s
 	@echo ... Helper/Node.obj
 	@echo ... Helper/Node.i
 	@echo ... Helper/Node.s
-	@echo ... Helper/Scanner.obj
-	@echo ... Helper/Scanner.i
-	@echo ... Helper/Scanner.s
+	@echo ... Helper/ReadProg.obj
+	@echo ... Helper/ReadProg.i
+	@echo ... Helper/ReadProg.s
+	@echo ... Helper/ReadRules.obj
+	@echo ... Helper/ReadRules.i
+	@echo ... Helper/ReadRules.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -29,7 +29,7 @@ LexicalRule *LexBulider::buildPostFixRule(const pair<string, vector<string>> &ru
                 stack.push(term);
             }
         } else if (term->getType() == Operation) {
-            if (term->getValue() == "@" || term->getValue() == "|") {
+            if (term->getValue() == "$" || term->getValue() == "|") {
                 while (!stack.empty() && (stack.top()->getType() == Operation && !(stack.top()->getValue() == "|"))
                        && !(stack.top()->getType() == parenthesis && stack.top()->getValue() == "(")) {
                     postFixTerms.push_back(stack.top());
@@ -90,8 +90,8 @@ vector<LexicalRuleTerm *> LexBulider::buildTerms(const vector<string> &rule) {
 
         if (checkExpanding(curTerm, nextTerm)) {
           //  cout << "in if condnnnnn\n";
-          //  cout << curTerm->getValue() << " " << nextTerm->getValue() << "\n";
-            expandedTerms.push_back(new LexicalRuleTerm("@", Operation));
+//            cout << curTerm->getValue() << " " << nextTerm->getValue() << "\n";
+            expandedTerms.push_back(new LexicalRuleTerm("$", Operation));
         }
     }
     expandedTerms.push_back(terms.back());
@@ -103,11 +103,11 @@ bool LexBulider::isOperation(const string &s) {
     return s == "+" || s == "*" || s == "|";
 }
 
-bool LexBulider::checkExpanding(LexicalRuleTerm *curTerm, LexicalRuleTerm *nextTerm) {
+bool LexBulider::checkExpanding(LexicalRuleTerm *currTerm, LexicalRuleTerm *nextTerm) {
 
-    bool checkCur = (curTerm->getType() == WORD || curTerm->getType() == CharGroup || curTerm->getType() == EPSILON) ||
-                    (curTerm->getType() == Operation && (curTerm->getValue() == "+" || curTerm->getValue() == "*")) ||
-                    (curTerm->getType() == parenthesis && curTerm->getValue() == ")");
+    bool checkCur = (currTerm->getType() == WORD || currTerm->getType() == CharGroup || currTerm->getType() == EPSILON) ||
+                    (currTerm->getType() == Operation && (currTerm->getValue() == "+" || currTerm->getValue() == "*")) ||
+                    (currTerm->getType() == parenthesis && currTerm->getValue() == ")");
 
     bool checkNext =
             (nextTerm->getType() == WORD || nextTerm->getType() == CharGroup || nextTerm->getType() == EPSILON) ||

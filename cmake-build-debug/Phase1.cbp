@@ -80,22 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Builder.cpp">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.cpp">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Builder.h">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Converter.cpp">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Converter.h">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.cpp">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.h">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.h">
 			<Option target="Phase1"/>
 		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.cpp">
@@ -110,13 +98,13 @@
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.cpp">
-			<Option target="Phase1"/>
-		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.h">
-			<Option target="Phase1"/>
-		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/MakeGraph.cpp">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/MakeGraph.h">
 			<Option target="Phase1"/>
 		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.cpp">
@@ -125,10 +113,16 @@
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.h">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.cpp">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/NfaGraph.cpp">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.h">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/NfaGraph.h">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/NfaToDfa.cpp">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/NfaToDfa.h">
 			<Option target="Phase1"/>
 		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Node.cpp">
@@ -137,10 +131,16 @@
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Scanner.cpp">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/ReadProg.cpp">
 			<Option target="Phase1"/>
 		</Unit>
-		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/Scanner.h">
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/ReadProg.h">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.cpp">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.h">
 			<Option target="Phase1"/>
 		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Phase1/main.cpp">

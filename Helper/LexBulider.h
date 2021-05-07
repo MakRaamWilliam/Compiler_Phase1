@@ -23,7 +23,7 @@ private:
 
     static bool isOperation(const string &s);
 
-    static bool checkExpanding(LexicalRuleTerm *curTerm, LexicalRuleTerm *nextTerm);
+    static bool checkExpanding(LexicalRuleTerm *currTerm, LexicalRuleTerm *nextTerm);
 
 };
 

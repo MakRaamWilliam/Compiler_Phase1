@@ -1,6 +1,8 @@
-int sum , count , pass , mnt; 
-while (pass !=10)
+int $sum , 54count , pass , mn@t, # ;
+flo$at x,y;
+while ( <>pass !=10)
 {
+if(50-30 > pas)
 if(pass <= 50)
 pass = pass + 1 ;
 else

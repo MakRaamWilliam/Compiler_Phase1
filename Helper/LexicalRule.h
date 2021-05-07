@@ -72,13 +72,6 @@ public:
         this->terms.push_back(term);
     }
 
-    string toString() {
-        string s = this->name + " ---> ";
-        for (LexicalRuleTerm *t:this->terms) {
-            s += t->toString() + " ";
-        }
-        return s;
-    }
 
 private:
     vector<LexicalRuleTerm *> terms;

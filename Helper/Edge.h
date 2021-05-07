@@ -19,25 +19,6 @@ public:
 public:
     Node *getDestination() const;
 
-    void setDestination(Node *destination);
-
-    char getStartAlphabet() const;
-
-    void setStartAlphabet(char startAlphabet);
-
-    char getEndAlphabet() const;
-
-    void setEndAlphabet(char endAlphabet);
-
-    int getSizeOfAlphabet() const;
-
-    void setSizeOfAlphabet(int sizeOfAlphabet);
-
-    const unordered_set<char> &getDisallowedAlphabet() const;
-
-    void setDisallowedAlphabet(const unordered_set<char> &disallowedAlphabet);
-
-    void addDisallowedSymbol(char symbol);
 
     bool isAcceptSymbol(char symbol);
 

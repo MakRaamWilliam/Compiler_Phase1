@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/makram99/CLionProjects/Phase1/Helper/Builder.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj"
-  "C:/Users/makram99/CLionProjects/Phase1/Helper/Converter.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj"
-  "C:/Users/makram99/CLionProjects/Phase1/Helper/DFA.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj"
+  "C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.obj"
   "C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj"
   "C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj"
-  "C:/Users/makram99/CLionProjects/Phase1/Helper/LexRules.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj"
+  "C:/Users/makram99/CLionProjects/Phase1/Helper/MakeGraph.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.obj"
   "C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj"
-  "C:/Users/makram99/CLionProjects/Phase1/Helper/NFA.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj"
+  "C:/Users/makram99/CLionProjects/Phase1/Helper/NfaGraph.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj"
+  "C:/Users/makram99/CLionProjects/Phase1/Helper/NfaToDfa.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj"
   "C:/Users/makram99/CLionProjects/Phase1/Helper/Node.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/Node.cpp.obj"
-  "C:/Users/makram99/CLionProjects/Phase1/Helper/Scanner.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj"
+  "C:/Users/makram99/CLionProjects/Phase1/Helper/ReadProg.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj"
+  "C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj"
   "C:/Users/makram99/CLionProjects/Phase1/main.cpp" "C:/Users/makram99/CLionProjects/Phase1/cmake-build-debug/CMakeFiles/Phase1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

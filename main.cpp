@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Helper/LexRules.h"
-#include "Helper/Builder.h"
-#include "Helper/Converter.h"
+#include "Helper/ReadRules.h"
+#include "Helper/MakeGraph.h"
+#include "Helper/NfaToDfa.h"
 #include "Helper/Minimiztion.h"
-#include "Helper/Scanner.h"
+#include "Helper/ReadProg.h"
 using namespace std;
 
 int main() {
@@ -11,36 +11,52 @@ int main() {
     // parsing file and build
     map<string, int> mp_prio{};
 
-    vector<LexicalRule*>vec_rule = LexRules::getInstance()->read_from_file("rules.txt", &mp_prio);
-    NFA* nfa = Builder::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
+    vector<LexicalRule*>vec_rule = ReadRules::getInstance()->read_from_file("rules.txt", &mp_prio);
+   // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
+    vector<NfaGraph *> startsNodes;
+    for (LexicalRule *rule:vec_rule) {
+        if (rule->getType() != RegularDefinition) {
+            NfaGraph *a = MakeGraph::getInstance()->makeLexRule(rule, mp_prio);
+            startsNodes.push_back(a);
+        }
+    }
+    NfaGraph *nfa = MakeGraph::getInstance()->makeComRecongz(startsNodes);
+
 
     //convert  from nfa to dfa
-    cout <<"DOOneeeee Pars\n";
-    DFA* dfa = Converter::getInstance()->convert(nfa, Builder::getInstance()->getAlphabet());
+    DfaGraph* dfa = NfaToDfa::getInstance()->convert(nfa, MakeGraph::getInstance()->getAlphabet());
     map<Node *, map<char, Node *>> op = dfa->getDTable();
 
 
     //minimize dfa
-    Minimiztion::getInstance()->DFAMinimize(dfa);
+    Minimiztion::getInstance()->partitions.clear();
+    Minimiztion::getInstance()->DFAStates = dfa->getDTable();
+    vector<Node *> endState;
+    vector<Node *> nonendState;
+    map<Node *, map<char, Node *>>::iterator itr;
+    for (itr = Minimiztion::getInstance()->DFAStates.begin(); itr != Minimiztion::getInstance()->DFAStates.end(); itr++) {
+        if (itr->first->isFinalState()) {
+            endState.push_back(itr->first);
+        } else {
+            nonendState.push_back(itr->first);
+        }
+    }
+    Minimiztion::getInstance()->partitions.push_back(nonendState);
+    Minimiztion::getInstance()->partitions.push_back(endState);
+    Minimiztion::getInstance()->Minimize(Minimiztion::getInstance()->partitions);
+    dfa->setDTable(Minimiztion::getInstance()->DFAStates);
+
+    //print table
     op = dfa->getDTable();
-    LexRules::getInstance()->printTable("table", op, Builder::getInstance()->getAlphabet());
+    ReadRules::getInstance()->printTable("table", op, MakeGraph::getInstance()->getAlphabet());
 
-
-    vector<pair<string, string>> tokens = Scanner::getInstance()->scanProgramFile("test.txt",  dfa);
+    //read the test program
+    vector<pair<string, string>> tokens = ReadProg::getInstance()->scanProgramFile("test.txt",  dfa);
+    cout <<"DOOneeeee \n";
+    //print the output file
     for(const pair<string, string>&token : tokens){
-        cout << token.second << endl;
+        cout << token.first  <<" "<<token.second << "\n";
     }
 
     return 0;
 }
-/*
- * int sum , count , pass , mnt;
-while (pass !=10)
-{
-if(pass <= 50)
-pass = pass + 1 ;
-else
-pass = pass --;
-}
-
- */

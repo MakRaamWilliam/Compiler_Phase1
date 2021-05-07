@@ -114,57 +114,57 @@ CMakeFiles/Phase1.dir/Helper/Edge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/Edge.cpp.s"
 	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\Edge.cpp -o CMakeFiles\Phase1.dir\Helper\Edge.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj: ../Helper/NFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\NFA.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\NFA.cpp
+CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj: ../Helper/NfaGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\NfaGraph.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\NfaGraph.cpp
 
-CMakeFiles/Phase1.dir/Helper/NFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/NFA.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\NFA.cpp > CMakeFiles\Phase1.dir\Helper\NFA.cpp.i
+CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\NfaGraph.cpp > CMakeFiles\Phase1.dir\Helper\NfaGraph.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/NFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/NFA.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\NFA.cpp -o CMakeFiles\Phase1.dir\Helper\NFA.cpp.s
+CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\NfaGraph.cpp -o CMakeFiles\Phase1.dir\Helper\NfaGraph.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj: ../Helper/Builder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\Builder.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\Builder.cpp
+CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.obj: ../Helper/MakeGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\MakeGraph.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\MakeGraph.cpp
 
-CMakeFiles/Phase1.dir/Helper/Builder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/Builder.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\Builder.cpp > CMakeFiles\Phase1.dir\Helper\Builder.cpp.i
+CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\MakeGraph.cpp > CMakeFiles\Phase1.dir\Helper\MakeGraph.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/Builder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/Builder.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\Builder.cpp -o CMakeFiles\Phase1.dir\Helper\Builder.cpp.s
+CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\MakeGraph.cpp -o CMakeFiles\Phase1.dir\Helper\MakeGraph.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj: ../Helper/DFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\DFA.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\DFA.cpp
+CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.obj: ../Helper/DfaGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\DfaGraph.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\DfaGraph.cpp
 
-CMakeFiles/Phase1.dir/Helper/DFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/DFA.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\DFA.cpp > CMakeFiles\Phase1.dir\Helper\DFA.cpp.i
+CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\DfaGraph.cpp > CMakeFiles\Phase1.dir\Helper\DfaGraph.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/DFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/DFA.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\DFA.cpp -o CMakeFiles\Phase1.dir\Helper\DFA.cpp.s
+CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\DfaGraph.cpp -o CMakeFiles\Phase1.dir\Helper\DfaGraph.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj: ../Helper/LexRules.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\LexRules.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\LexRules.cpp
+CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj: ../Helper/ReadRules.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\ReadRules.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\ReadRules.cpp
 
-CMakeFiles/Phase1.dir/Helper/LexRules.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/LexRules.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\LexRules.cpp > CMakeFiles\Phase1.dir\Helper\LexRules.cpp.i
+CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\ReadRules.cpp > CMakeFiles\Phase1.dir\Helper\ReadRules.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/LexRules.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/LexRules.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\LexRules.cpp -o CMakeFiles\Phase1.dir\Helper\LexRules.cpp.s
+CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\ReadRules.cpp -o CMakeFiles\Phase1.dir\Helper\ReadRules.cpp.s
 
 CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj: CMakeFiles/Phase1.dir/flags.make
 CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj: ../Helper/LexBulider.cpp
@@ -192,45 +192,45 @@ CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.s"
 	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\Minimiztion.cpp -o CMakeFiles\Phase1.dir\Helper\Minimiztion.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj: ../Helper/Converter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\Converter.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\Converter.cpp
+CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj: ../Helper/NfaToDfa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\NfaToDfa.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\NfaToDfa.cpp
 
-CMakeFiles/Phase1.dir/Helper/Converter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/Converter.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\Converter.cpp > CMakeFiles\Phase1.dir\Helper\Converter.cpp.i
+CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\NfaToDfa.cpp > CMakeFiles\Phase1.dir\Helper\NfaToDfa.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/Converter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/Converter.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\Converter.cpp -o CMakeFiles\Phase1.dir\Helper\Converter.cpp.s
+CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\NfaToDfa.cpp -o CMakeFiles\Phase1.dir\Helper\NfaToDfa.cpp.s
 
-CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj: CMakeFiles/Phase1.dir/flags.make
-CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj: ../Helper/Scanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\Scanner.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\Scanner.cpp
+CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj: CMakeFiles/Phase1.dir/flags.make
+CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj: ../Helper/ReadProg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Phase1.dir\Helper\ReadProg.cpp.obj -c C:\Users\makram99\CLionProjects\Phase1\Helper\ReadProg.cpp
 
-CMakeFiles/Phase1.dir/Helper/Scanner.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/Scanner.cpp.i"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\Scanner.cpp > CMakeFiles\Phase1.dir\Helper\Scanner.cpp.i
+CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.i"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\makram99\CLionProjects\Phase1\Helper\ReadProg.cpp > CMakeFiles\Phase1.dir\Helper\ReadProg.cpp.i
 
-CMakeFiles/Phase1.dir/Helper/Scanner.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/Scanner.cpp.s"
-	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\Scanner.cpp -o CMakeFiles\Phase1.dir\Helper\Scanner.cpp.s
+CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.s"
+	"E:\New folder (3)MG\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\makram99\CLionProjects\Phase1\Helper\ReadProg.cpp -o CMakeFiles\Phase1.dir\Helper\ReadProg.cpp.s
 
 # Object files for target Phase1
 Phase1_OBJECTS = \
 "CMakeFiles/Phase1.dir/main.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/Node.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj" \
 "CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj" \
-"CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj"
+"CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj" \
+"CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj"
 
 # External object files for target Phase1
 Phase1_EXTERNAL_OBJECTS =
@@ -238,14 +238,14 @@ Phase1_EXTERNAL_OBJECTS =
 Phase1.exe: CMakeFiles/Phase1.dir/main.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/Node.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/Edge.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/NFA.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/Builder.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/DFA.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/LexRules.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/MakeGraph.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/DfaGraph.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/LexBulider.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/Helper/Minimiztion.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/Converter.cpp.obj
-Phase1.exe: CMakeFiles/Phase1.dir/Helper/Scanner.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj
+Phase1.exe: CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj
 Phase1.exe: CMakeFiles/Phase1.dir/build.make
 Phase1.exe: CMakeFiles/Phase1.dir/linklibs.rsp
 Phase1.exe: CMakeFiles/Phase1.dir/objects1.rsp

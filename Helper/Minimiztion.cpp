@@ -6,13 +6,11 @@
 Minimiztion *Minimiztion::instance = nullptr;
 
 // minimizer function
-void Minimiztion::DFAMinimize(DFA *dfa) {
+void Minimiztion::DFAMinimize(DfaGraph *dfa) {
 
     this->partitions.clear();
     // get dfa before minimizing
     DFAStates = dfa->getDTable();
-    // loop on these states to differentiate between final and non final
-    // put the final and non final in two vectors
     vector<Node *> FinalStates;
     vector<Node *> NonFinalStates;
     map<Node *, map<char, Node *>>::iterator itr;
