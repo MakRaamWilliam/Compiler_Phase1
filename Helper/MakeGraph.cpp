@@ -10,14 +10,14 @@ MakeGraph *MakeGraph::getInstance() {
     return instance;
 }
 
-NfaGraph *MakeGraph::makeEpsRecognz() {
-    return MakeGraph::makeLettRecognz(EPS);
-}
+// NfaGraph *MakeGraph::makeEpsRecognz() {
+//     return MakeGraph::makeLettRecognz(EPS);
+// }
 
-NfaGraph *MakeGraph::makeLettRecognz(char letter) {
+// NfaGraph *MakeGraph::makeLettRecognz(char letter) {
 
-    return makeAlphatRecogniz(letter, letter);
-}
+//     return makeAlphatRecogniz(letter, letter);
+// }
 
 NfaGraph *MakeGraph::makeAlphatRecogniz(char startAlphabet, char endAlphabet) {
     Node *start = new Node("0", !FINALSTATE);
@@ -140,14 +140,14 @@ NfaGraph *MakeGraph::makeLexRule(LexicalRule *rule, map<string, int> priorities)
             case WORD: {
                 NfaGraph *a = nullptr;
                 for (char c: term->getValue()) {
-                    a = makeAndRecongz(a, makeLettRecognz(c));
+                    a = makeAndRecongz(a, makeAlphatRecogniz(c, c));
                     this->alphabet.insert(c);
                 }
                 stack.push(a);
             }
                 break;
             case EPSILON: {
-                NfaGraph *a = makeEpsRecognz();
+                NfaGraph *a = makeAlphatRecogniz(EPS, EPS);
                 stack.push(a);
             }
                 break;

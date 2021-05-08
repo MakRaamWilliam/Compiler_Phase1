@@ -89,8 +89,7 @@ vector<LexicalRuleTerm *> LexBulider::buildTerms(const vector<string> &rule) {
         expandedTerms.push_back(curTerm);
 
         if (checkExpanding(curTerm, nextTerm)) {
-          //  cout << "in if condnnnnn\n";
-//            cout << curTerm->getValue() << " " << nextTerm->getValue() << "\n";
+
             expandedTerms.push_back(new LexicalRuleTerm("$", Operation));
         }
     }

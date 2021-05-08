@@ -8,8 +8,8 @@ class Node;
 class NfaGraph;
 
 class Minimiztion {
-public:
-    void DFAMinimize(DfaGraph *dfa);
+// public:
+    // void DFAMinimize(DfaGraph *dfa);
 
 private:
     static Minimiztion *instance;

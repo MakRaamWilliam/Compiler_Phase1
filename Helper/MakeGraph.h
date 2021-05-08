@@ -23,9 +23,9 @@ private:
     static MakeGraph *instance;
     set<char> alphabet;
 
-    NfaGraph *makeLettRecognz(char letter);
+    // NfaGraph *makeLettRecognz(char letter);
     NfaGraph *makeOrRecogniz(NfaGraph *, NfaGraph *);
-    NfaGraph *makeEpsRecognz();
+    // NfaGraph *makeEpsRecognz();
     NfaGraph *makeAndRecongz(NfaGraph *, NfaGraph *);
     NfaGraph *makeAlphatRecogniz(char , char );
     NfaGraph *makePosRecongz(NfaGraph *);

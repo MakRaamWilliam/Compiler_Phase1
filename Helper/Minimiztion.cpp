@@ -6,30 +6,30 @@
 Minimiztion *Minimiztion::instance = nullptr;
 
 // minimizer function
-void Minimiztion::DFAMinimize(DfaGraph *dfa) {
+// void Minimiztion::DFAMinimize(DfaGraph *dfa) {
 
-    this->partitions.clear();
-    // get dfa before minimizing
-    DFAStates = dfa->getDTable();
-    vector<Node *> FinalStates;
-    vector<Node *> NonFinalStates;
-    map<Node *, map<char, Node *>>::iterator itr;
-    for (itr = DFAStates.begin(); itr != DFAStates.end(); itr++) {
-        if (itr->first->isFinalState()) {
-            FinalStates.push_back(itr->first);
-        } else {
-            NonFinalStates.push_back(itr->first);
-        }
-    }
+//     this->partitions.clear();
+//     // get dfa before minimizing
+//     DFAStates = dfa->getDTable();
+//     vector<Node *> FinalStates;
+//     vector<Node *> NonFinalStates;
+//     map<Node *, map<char, Node *>>::iterator itr;
+//     for (itr = DFAStates.begin(); itr != DFAStates.end(); itr++) {
+//         if (itr->first->isFinalState()) {
+//             FinalStates.push_back(itr->first);
+//         } else {
+//             NonFinalStates.push_back(itr->first);
+//         }
+//     }
 
-    // the final and non final put them in queue of vector of nodes
-    partitions.push_back(NonFinalStates);
-    partitions.push_back(FinalStates);
+//     // the final and non final put them in queue of vector of nodes
+//     partitions.push_back(NonFinalStates);
+//     partitions.push_back(FinalStates);
 
-    // minimize the table
-    Minimize(partitions);
-    dfa->setDTable(DFAStates);
-}
+//     // minimize the table
+//     Minimize(partitions);
+//     dfa->setDTable(DFAStates);
+// }
 
 /*
  * minimize the results

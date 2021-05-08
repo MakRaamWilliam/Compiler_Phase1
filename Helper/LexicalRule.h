@@ -30,9 +30,9 @@ public:
         return this->type;
     }
 
-    string toString() {
-        return value;
-    };
+    // string toString() {
+    //     return value;
+    // };
 
 private:
     string value;
@@ -56,17 +56,17 @@ public:
         this->terms.clear();
     }
 
-    const string &getName() const {
-        return this->name;
-    }
+    // const string &getName() const {
+    //     return this->name;
+    // }
 
-    LexicalType getType() const {
-        return this->type;
-    }
+    // LexicalType getType() const {
+    //     return this->type;
+    // }
 
-    vector<LexicalRuleTerm *> getTerms() const {
-        return this->terms;
-    }
+    // vector<LexicalRuleTerm *> getTerms() const {
+    //     return this->terms;
+    // }
 
     void addTerm(LexicalRuleTerm *term) {
         this->terms.push_back(term);
