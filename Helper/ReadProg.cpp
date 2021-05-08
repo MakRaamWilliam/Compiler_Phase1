@@ -10,9 +10,9 @@ ReadProg *ReadProg::getInstance() {
     return instance;
 }
 
-vector<pair<string, string>> ReadProg::scanProgramFile(const string &fileName, DfaGraph *newRecognizer) {
+vector<pair<string, string>> ReadProg::ReadProgFile(const string &fileName, DfaGraph *recognizer) {
     vector<pair<string, string>> tokens{};
-    this->recognizer = newRecognizer;
+    this->recognizer = recognizer;
     ifstream file(fileName);
     string line;
     vector<string> words{};
@@ -42,7 +42,7 @@ vector<pair<string, string>> ReadProg::scanWord(string &word) {
         currentState = this->recognizer->move(currentState, word.at(i));
 
        // cout<<word.at(i);
-        if (currentState->isFinalState()) {
+        if (currentState->checkEndState()) {
            // cout<<"curr\n";
             last = i;
             finalState = currentState;
@@ -61,7 +61,7 @@ vector<pair<string, string>> ReadProg::scanWord(string &word) {
             currentState = startState;
         }
         else if( currentState ==  this->recognizer->nullNode){
-            cout<<"in elseeee "<< word.at(i)<<"\n";
+          //  cout<<"in elseeee "<< word.at(i)<<"\n";
             word=word.erase(i,1);
             i--;
             currentState = prevState;

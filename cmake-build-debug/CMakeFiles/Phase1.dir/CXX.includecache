@@ -20,6 +20,10 @@ bits/stdc++.h
 Node.h
 C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
 
+C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.cpp
+LexBulider.h
+C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h
+
 C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h
 LexicalRule.h
 C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
@@ -59,6 +63,12 @@ C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
 C:/Users/makram99/CLionProjects/Phase1/Helper/ReadProg.h
 DfaGraph.h
 C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.h
+
+C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.cpp
+ReadRules.h
+C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.h
+utility
+-
 
 C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.h
 iostream

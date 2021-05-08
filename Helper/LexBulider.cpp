@@ -3,7 +3,7 @@
 LexBulider *LexBulider::instance = nullptr;
 
 LexBulider::~LexBulider() {
-    this->mapOfTerms.clear();
+    this->mpTerms.clear();
 }
 
 LexBulider *LexBulider::getInstance() {
@@ -13,7 +13,7 @@ LexBulider *LexBulider::getInstance() {
     return instance;
 }
 
-LexicalRule *LexBulider::buildPostFixRule(const pair<string, vector<string>> &rule, enum LexicalType ruleType) {
+LexicalRule *LexBulider::buildPost(const pair<string, vector<string>> &rule, enum LexicalType ruleType) {
     vector<LexicalRuleTerm *> terms = buildTerms(rule.second);
     vector<LexicalRuleTerm *> postFixTerms{};
     stack<LexicalRuleTerm *> stack{};
@@ -37,8 +37,8 @@ LexicalRule *LexBulider::buildPostFixRule(const pair<string, vector<string>> &ru
                 }
             }
             stack.push(term);
-        } else if (term->getType() == WORD && this->mapOfTerms.find(term->getValue()) != this->mapOfTerms.end()) {
-            vector<LexicalRuleTerm *> tempTerms = this->mapOfTerms.at(term->getValue());
+        } else if (term->getType() == WORD && this->mpTerms.find(term->getValue()) != this->mpTerms.end()) {
+            vector<LexicalRuleTerm *> tempTerms = this->mpTerms.at(term->getValue());
             postFixTerms.insert(postFixTerms.end(), tempTerms.begin(), tempTerms.end());
         } else {
             postFixTerms.push_back(term);
@@ -48,7 +48,7 @@ LexicalRule *LexBulider::buildPostFixRule(const pair<string, vector<string>> &ru
         postFixTerms.push_back(stack.top());
         stack.pop();
     }
-    this->mapOfTerms.insert(pair<string, vector<LexicalRuleTerm *>>(rule.first, postFixTerms));
+    this->mpTerms.insert(pair<string, vector<LexicalRuleTerm *>>(rule.first, postFixTerms));
     return new LexicalRule(rule.first, ruleType, postFixTerms);
 }
 
@@ -65,7 +65,7 @@ vector<LexicalRule *> LexBulider::buildRules(const vector<string> &rules, enum L
 vector<LexicalRuleTerm *> LexBulider::buildTerms(const vector<string> &rule) {
     vector<LexicalRuleTerm *> terms{};
     for (string s:rule) {
-        if (isOperation(s)) {
+        if (isOper(s)) {
             terms.push_back(new LexicalRuleTerm(s, Operation));
         } else if (s.find('-') == 1 && s.size() == 3) {
             terms.push_back(new LexicalRuleTerm(s, CharGroup));
@@ -88,9 +88,7 @@ vector<LexicalRuleTerm *> LexBulider::buildTerms(const vector<string> &rule) {
         LexicalRuleTerm *nextTerm = terms.at(i + 1);
         expandedTerms.push_back(curTerm);
 
-        if (checkExpanding(curTerm, nextTerm)) {
-          //  cout << "in if condnnnnn\n";
-//            cout << curTerm->getValue() << " " << nextTerm->getValue() << "\n";
+        if (isExpen(curTerm, nextTerm)) {
             expandedTerms.push_back(new LexicalRuleTerm("$", Operation));
         }
     }
@@ -99,11 +97,11 @@ vector<LexicalRuleTerm *> LexBulider::buildTerms(const vector<string> &rule) {
     return expandedTerms;
 }
 
-bool LexBulider::isOperation(const string &s) {
+bool LexBulider::isOper(const string &s) {
     return s == "+" || s == "*" || s == "|";
 }
 
-bool LexBulider::checkExpanding(LexicalRuleTerm *currTerm, LexicalRuleTerm *nextTerm) {
+bool LexBulider::isExpen(LexicalRuleTerm *currTerm, LexicalRuleTerm *nextTerm) {
 
     bool checkCur = (currTerm->getType() == WORD || currTerm->getType() == CharGroup || currTerm->getType() == EPSILON) ||
                     (currTerm->getType() == Operation && (currTerm->getValue() == "+" || currTerm->getValue() == "*")) ||

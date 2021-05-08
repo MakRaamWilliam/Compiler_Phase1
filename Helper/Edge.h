@@ -12,27 +12,25 @@ class Node;
 
 class Edge {
 public:
-    Edge(Node *destination, char startAlphabet, char endAlphabet);
+    Edge(Node *des, char startAlpha, char endAlpha);
 
     virtual ~Edge();
 
 public:
     Node *getDestination() const;
 
+    bool isAccSymb(char symb);
 
-    bool isAcceptSymbol(char symbol);
+    Node *maketrans(char symb);
 
-    Node *doTransition(char symbol);
-
-    bool isEPSTransition() const;
+    bool isEpsTrans() const;
 
 private:
-
-    Node *destination;
-    char startAlphabet;
-    char endAlphabet;
-    int sizeOfAlphabet;
-    unordered_set<char> disallowedAlphabet;
+    char startAlpha;
+    char endAlpha;
+    Node *des;
+    int sizeAlpha;
+    unordered_set<char> notallow;
 
 };
 

@@ -7,7 +7,7 @@ class NfaToDfa {
 public:
     static NfaToDfa *getInstance();
 
-    DfaGraph *convert(NfaGraph *nfa, const set<char> &alphabet);
+    DfaGraph *Convert(NfaGraph *Nfa, const set<char> &alpha);
 
 
 private:
@@ -17,7 +17,7 @@ private:
 
     bool CompSets(const set<Node *> &x, set<Node *> y);
 
-    set<Node *> move(const set<Node *> &nodes, char symbol);
+    set<Node *> Change(const set<Node *> &nodes, char symbol);
 
     set<Node *> closure(set<Node *> nodes);
 

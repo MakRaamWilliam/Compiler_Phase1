@@ -10,19 +10,19 @@ NfaToDfa *NfaToDfa::getInstance() {
     return instance;
 }
 
-DfaGraph *NfaToDfa::convert(NfaGraph *nfa, const set<char> &alphabet) {
+DfaGraph *NfaToDfa::Convert(NfaGraph *Nfa, const set<char> &alpha) {
     set<Node *> nfaState;
     map<set<Node *>, Node *> ndStates;
     map<Node *, bool> mark;
     map<Node *, map<char, Node *>> Dtable;
     int i = 0;
-    nfaState.insert(nfa->getStart());
+    nfaState.insert(Nfa->getStart());
     nfaState = closure(nfaState);
     Node *dfaState = new Node("A", 0);
-    dfaState->setIsFinal(0);
-    for (auto f:nfa->getFinalStates()) {
-        if (nfaState.find(f) != nfaState.end() && (f->isFinalState() > dfaState->isFinalState())) {
-            dfaState->setIsFinal(f->isFinalState());
+    dfaState->setEndState(0);
+    for (auto f:Nfa->getendState()) {
+        if (nfaState.find(f) != nfaState.end() && (f->checkEndState() > dfaState->checkEndState())) {
+            dfaState->setEndState(f->checkEndState());
             dfaState->setName(f->getName());
         }
     }
@@ -34,7 +34,7 @@ DfaGraph *NfaToDfa::convert(NfaGraph *nfa, const set<char> &alphabet) {
     do {
         bsize = ndStates.size();
         flag = 0;
-        for (const auto &itr:ndStates)    // loop on all states we get
+        for (const auto &itr:ndStates)
         {
             nfaState = itr.first;
             dfaState = itr.second;
@@ -46,13 +46,13 @@ DfaGraph *NfaToDfa::convert(NfaGraph *nfa, const set<char> &alphabet) {
                 auto *drow = new map<char, Node *>();
                 drow->clear();
                 map<char, Node *>::iterator it2;
-                for (auto c:alphabet)
+                for (auto c:alpha)
                 {
                     drow->insert(pair<char, Node *>(c, nullNode));
-                    if (move(nfaState, c).empty()) {
+                    if (Change(nfaState, c).empty()) {
                         continue;
                     }
-                    set<Node *> u = closure(move(nfaState, c));
+                    set<Node *> u = closure(Change(nfaState, c));
                     bool found = false;
                     for (const auto &itr2:ndStates) {
                         if (CompSets(u, itr2.first)) {
@@ -81,9 +81,9 @@ DfaGraph *NfaToDfa::convert(NfaGraph *nfa, const set<char> &alphabet) {
                 }
                 Dtable.insert(pair<Node *, map<char, Node *>>(dfaState, *drow));
             }
-            for (auto f:nfa->getFinalStates()) {
-                if (nfaState.find(f) != nfaState.end() && (f->isFinalState() > dfaState->isFinalState())) {
-                    dfaState->setIsFinal(f->isFinalState());
+            for (auto f:Nfa->getendState()) {
+                if (nfaState.find(f) != nfaState.end() && (f->checkEndState() > dfaState->checkEndState())) {
+                    dfaState->setEndState(f->checkEndState());
                     dfaState->setName(f->getName());
                 }
             }
@@ -106,7 +106,7 @@ set<Node *> NfaToDfa::closure(set<Node *> nodes) {
             for (auto &edge : edges)
             {
                 x = edge;
-                if (x->isEPSTransition()) {
+                if (x->isEpsTrans()) {
                     nodes.insert(x->getDestination());
                 }
 
@@ -117,7 +117,7 @@ set<Node *> NfaToDfa::closure(set<Node *> nodes) {
 }
 
 
-set<Node *> NfaToDfa::move(const set<Node *> &nodes, char symbol) {
+set<Node *> NfaToDfa::Change(const set<Node *> &nodes, char symbol) {
     set<Node *>::iterator itr;
     set<Node *> res;
     for (itr = nodes.begin(); itr != nodes.end(); itr++)
@@ -127,8 +127,8 @@ set<Node *> NfaToDfa::move(const set<Node *> &nodes, char symbol) {
         for (auto &edge : edges)
         {
             x = edge;
-            if (x->isAcceptSymbol(symbol)) {
-                res.insert(x->doTransition(symbol));
+            if (x->isAccSymb(symbol)) {
+                res.insert(x->maketrans(symbol));
             }
         }
     }

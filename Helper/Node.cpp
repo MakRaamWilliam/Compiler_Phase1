@@ -3,8 +3,8 @@
 #include <utility>
 #include "Edge.h"
 
-Node::Node(string name, int isFinal) {
-    this->isFinal = isFinal;
+Node::Node(string name, int isend) {
+    this->isend = isend;
     this->name = std::move(name);
 
 }
@@ -13,8 +13,8 @@ Node::~Node() {
     this->edges.clear();
 }
 
-Node::Node(int isFinal) {
-    this->isFinal = isFinal;
+Node::Node(int isend) {
+    this->isend = isend;
 }
 
 const string &Node::getName() const {
@@ -25,12 +25,12 @@ void Node::setName(const string &name) {
     this->name = name;
 }
 
-int Node::isFinalState() const {
-    return isFinal;
+int Node::checkEndState() const {
+    return isend;
 }
 
-void Node::setIsFinal(int isFinal) {
-    this->isFinal = isFinal;
+void Node::setEndState(int isFinal) {
+    this->isend = isFinal;
 }
 
 vector<Edge *> Node::getEdges() const {

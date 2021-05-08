@@ -1,39 +1,39 @@
 #include "Edge.h"
 
-Edge::Edge(Node *destination, char startAlphabet, char endAlphabet) {
-    this->destination = destination;
-    this->startAlphabet = startAlphabet;
-    this->endAlphabet = endAlphabet;
-    this->sizeOfAlphabet = endAlphabet - startAlphabet + 1;
+Edge::Edge(Node *des, char startAlpha, char endAlpha) {
+    this->des = des;
+    this->startAlpha = startAlpha;
+    this->endAlpha = endAlpha;
+    this->sizeAlpha = endAlpha - startAlpha + 1;
 }
 
 Edge::~Edge() {
 
-    free(this->destination);
-    this->disallowedAlphabet.clear();
+    free(this->des);
+    this->notallow.clear();
 }
 
 Node *Edge::getDestination() const {
-    return destination;
+    return des;
 }
 
 
-bool Edge::isAcceptSymbol(const char symbol) {
+bool Edge::isAccSymb(const char symb) {
 
-    if (this->disallowedAlphabet.find(symbol) != this->disallowedAlphabet.end()) {
+    if (this->notallow.find(symb) != this->notallow.end()) {
         return false;
     }
-    return symbol >= this->startAlphabet && symbol <= this->endAlphabet;
+    return symb >= this->startAlpha && symb <= this->endAlpha;
 }
 
-Node *Edge::doTransition(const char symbol) {
+Node *Edge::maketrans(const char symb) {
 
-    if (this->isAcceptSymbol(symbol)) {
-        return this->destination;
+    if (this->isAccSymb(symb)) {
+        return this->des;
     }
     return nullptr;
 }
 
-bool Edge::isEPSTransition() const {
-    return this->startAlphabet == EPS && this->endAlphabet == EPS;
+bool Edge::isEpsTrans() const {
+    return this->startAlpha == EPS && this->endAlpha == EPS;
 }

@@ -6,7 +6,7 @@ class ReadProg {
 public:
     static ReadProg *getInstance();
 
-    vector<pair<string, string>> scanProgramFile(const string &fileName, DfaGraph *recognizer);
+    vector<pair<string, string>> ReadProgFile(const string &fileName, DfaGraph *recognizer);
 
 private:
     ReadProg() = default;

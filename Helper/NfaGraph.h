@@ -16,8 +16,7 @@ public:
 
     Node *getEnd() const;
 
-
-    set<Node *> getFinalStates();
+    set<Node *> getendState();
 
 private:
     Node *start;

@@ -18,7 +18,7 @@ NfaGraph::~NfaGraph() {
     free(this->end);
 }
 
-set<Node *> NfaGraph::getFinalStates() {
+set<Node *> NfaGraph::getendState() {
     set<Node *> finalStates{};
     set<Node *> visited{};
     queue<Node *> s;
@@ -34,7 +34,7 @@ set<Node *> NfaGraph::getFinalStates() {
                 s.push(targetNode);
             }
         }
-        if (node->isFinalState()) {
+        if (node->checkEndState()) {
             finalStates.insert(node);
         }
 

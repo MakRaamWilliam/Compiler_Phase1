@@ -8,24 +8,19 @@ public:
 
     static LexBulider *getInstance();
 
-    LexicalRule *buildPostFixRule(const pair<string, vector<string>> &rule, enum LexicalType ruleType);
+    LexicalRule *buildPost(const pair<string, vector<string>> &rule, enum LexicalType ruleType);
 
     vector<LexicalRule *> buildRules(const vector<string> &rules, enum LexicalType rulesType);
-
 
 private:
     LexBulider() = default;
 
     static LexBulider *instance;
-    map<string, vector<LexicalRuleTerm *>> mapOfTerms;
-
+    map<string, vector<LexicalRuleTerm *>> mpTerms;
     vector<LexicalRuleTerm *> buildTerms(const vector<string> &rule);
-
-    static bool isOperation(const string &s);
-
-    static bool checkExpanding(LexicalRuleTerm *currTerm, LexicalRuleTerm *nextTerm);
+    static bool isOper(const string &s);
+    static bool isExpen(LexicalRuleTerm *currTerm, LexicalRuleTerm *nextTerm);
 
 };
-
 
 #endif

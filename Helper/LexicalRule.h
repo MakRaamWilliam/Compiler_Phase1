@@ -30,10 +30,6 @@ public:
         return this->type;
     }
 
-    string toString() {
-        return value;
-    };
-
 private:
     string value;
     LexicalTermType type;

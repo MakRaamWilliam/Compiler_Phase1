@@ -12,21 +12,21 @@ class Edge;
 
 class Node {
 public:
-    Node(string name, int isFinal);
+    Node(string name, int isend);
 
-    explicit Node(int isFinal);
+    explicit Node(int isend);
 
     virtual ~Node();
 
 private:
     string name;
-    int isFinal;
+    int isend;
     vector<Edge *> edges;
 
 public:
-    int isFinalState() const;
+    int checkEndState() const;
 
-    void setIsFinal(int isFinal);
+    void setEndState(int isFinal);
 
     const string &getName() const;
 

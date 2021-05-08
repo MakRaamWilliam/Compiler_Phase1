@@ -10,14 +10,6 @@ MakeGraph *MakeGraph::getInstance() {
     return instance;
 }
 
-NfaGraph *MakeGraph::makeEpsRecognz() {
-    return MakeGraph::makeLettRecognz(EPS);
-}
-
-NfaGraph *MakeGraph::makeLettRecognz(char letter) {
-
-    return makeAlphatRecogniz(letter, letter);
-}
 
 NfaGraph *MakeGraph::makeAlphatRecogniz(char startAlphabet, char endAlphabet) {
     Node *start = new Node("0", !FINALSTATE);
@@ -30,8 +22,8 @@ NfaGraph *MakeGraph::makeOrRecogniz(NfaGraph *recognizer1, NfaGraph *recognizer2
     Node *start = new Node(!FINALSTATE);
     Node *end = new Node(FINALSTATE);
 
-    recognizer1->getEnd()->setIsFinal(!FINALSTATE);
-    recognizer2->getEnd()->setIsFinal(!FINALSTATE);
+    recognizer1->getEnd()->setEndState(!FINALSTATE);
+    recognizer2->getEnd()->setEndState(!FINALSTATE);
 
     start->addEdge(new Edge(recognizer1->getStart(), EPS, EPS));
     start->addEdge(new Edge(recognizer2->getStart(), EPS, EPS));
@@ -55,7 +47,7 @@ NfaGraph *MakeGraph::makeAndRecongz(NfaGraph *recognizer1, NfaGraph *recognizer2
     Node *start = recognizer1->getStart();
     Node *end = recognizer2->getEnd();
 
-    recognizer1->getEnd()->setIsFinal(!FINALSTATE);
+    recognizer1->getEnd()->setEndState(!FINALSTATE);
     recognizer1->getEnd()->addEdge(new Edge(recognizer2->getStart(), EPS, EPS));
 
     free(recognizer1);
@@ -78,7 +70,7 @@ NfaGraph *MakeGraph::makePosRecongz(NfaGraph *recognizer) {
     Node *end = new Node(FINALSTATE);
     start->addEdge(new Edge(recognizer->getStart(), EPS, EPS));
 
-    recognizer->getEnd()->setIsFinal(!FINALSTATE);
+    recognizer->getEnd()->setEndState(!FINALSTATE);
 
     recognizer->getEnd()->addEdge(new Edge(recognizer->getStart(), EPS, EPS));
     recognizer->getEnd()->addEdge(new Edge(end, EPS, EPS));
@@ -140,14 +132,14 @@ NfaGraph *MakeGraph::makeLexRule(LexicalRule *rule, map<string, int> priorities)
             case WORD: {
                 NfaGraph *a = nullptr;
                 for (char c: term->getValue()) {
-                    a = makeAndRecongz(a, makeLettRecognz(c));
+                    a = makeAndRecongz(a, makeAlphatRecogniz(c,c));
                     this->alphabet.insert(c);
                 }
                 stack.push(a);
             }
                 break;
             case EPSILON: {
-                NfaGraph *a = makeEpsRecognz();
+                NfaGraph *a = makeAlphatRecogniz(EPS,EPS);
                 stack.push(a);
             }
                 break;
@@ -158,7 +150,7 @@ NfaGraph *MakeGraph::makeLexRule(LexicalRule *rule, map<string, int> priorities)
     result = stack.top();
     stack.pop();
     result->getEnd()->setName(rule->getName());
-    result->getEnd()->setIsFinal(priorities.at(rule->getName()));
+    result->getEnd()->setEndState(priorities.at(rule->getName()));
     return result;
 }
 

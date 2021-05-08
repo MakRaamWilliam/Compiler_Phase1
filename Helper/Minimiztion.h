@@ -8,28 +8,28 @@ class Node;
 class NfaGraph;
 
 class Minimiztion {
-public:
-    void DFAMinimize(DfaGraph *dfa);
 
-private:
-    static Minimiztion *instance;
+
 public:
     static Minimiztion *getInstance();
 
-    map<Node *, map<char, Node *>> DFAStates;
-    vector<vector<Node *>> partitions;
+    static Minimiztion *instance;
 
-    vector<vector<Node *>> Minimize(const vector<vector<Node *>> &partitions);
+    map<Node *, map<char, Node *>> dfaStates;
+
+    vector<vector<Node *>> partts;
+
+    vector<vector<Node *>> Minimize(const vector<vector<Node *>> &parrts);
 
 private:
 
-    bool areStatesUnique(const vector<vector<Node *>> &partitions, Node *, Node *);
+    bool compState(const vector<vector<Node *>> &partitions, Node *state1, Node *state2);
 
-    bool containedBySamePartition(const vector<vector<Node *>> &, Node *, Node *);
+    bool HaveState(const vector<vector<Node *>> &partts, Node *state);
 
-    bool containState(const vector<vector<Node *>> &, Node *);
+    bool HaveEqualstate(const vector<vector<Node *>> &partts, Node *state1, Node *state2);
 
-    void updateTable(vector<Node *>);
+    void updateTable(vector<Node *> partts);
 
 };
 

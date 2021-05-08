@@ -14,17 +14,14 @@ class ReadRules {
 public:
     virtual ~ReadRules() = default;
 
-    vector<LexicalRule *> read_from_file(const string &input_file, map<string, int> *priorities);
+    vector<LexicalRule *> ReadRuleFile(const string &rulefile, map<string, int> *priorities);
 
-    void printTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alphabet);
+    void printTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alpha);
 
     static ReadRules *getInstance();
 
 private:
-    regex regular_definition_regex;
-    regex regular_expression_regex;
-    regex keywords_regex;
-    regex punctuations_regex;
+    regex definition, punctuation, keyword, expression;
     smatch match;
 
 private:
@@ -32,15 +29,16 @@ private:
 
     static ReadRules *instance;
 
-    static vector<string> split_by_spaces(string splitted);
+    static vector<string> splitSpaces(string splitted);
 
     static string removeSpaces(string str);
 
-    static vector<string> split_each_char(const string &str);
+    static vector<string> splitDefinition(const string &str);
 
-    static vector<string> split_for_regular_definition(const string &str);
+    static vector<string> splitExpression(const string &str);
 
-    static vector<string> split_for_regular_expression(const string &str);
+    static vector<string> splitEachChar(const string &str);
+
 
 };
 

@@ -11,7 +11,7 @@ int main() {
     // parsing file and build
     map<string, int> mp_prio{};
 
-    vector<LexicalRule*>vec_rule = ReadRules::getInstance()->read_from_file("rules.txt", &mp_prio);
+    vector<LexicalRule*>vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
    // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
     vector<NfaGraph *> startsNodes;
     for (LexicalRule *rule:vec_rule) {
@@ -23,36 +23,36 @@ int main() {
     NfaGraph *nfa = MakeGraph::getInstance()->makeComRecongz(startsNodes);
 
 
-    //convert  from nfa to dfa
-    DfaGraph* dfa = NfaToDfa::getInstance()->convert(nfa, MakeGraph::getInstance()->getAlphabet());
+    //Convert  from nfa to dfa
+    DfaGraph* dfa = NfaToDfa::getInstance()->Convert(nfa, MakeGraph::getInstance()->getAlphabet());
     map<Node *, map<char, Node *>> op = dfa->getDTable();
 
 
     //minimize dfa
-    Minimiztion::getInstance()->partitions.clear();
-    Minimiztion::getInstance()->DFAStates = dfa->getDTable();
+    Minimiztion::getInstance()->partts.clear();
+    Minimiztion::getInstance()->dfaStates = dfa->getDTable();
     vector<Node *> endState;
     vector<Node *> nonendState;
     map<Node *, map<char, Node *>>::iterator itr;
-    for (itr = Minimiztion::getInstance()->DFAStates.begin(); itr != Minimiztion::getInstance()->DFAStates.end(); itr++) {
-        if (itr->first->isFinalState()) {
+    for (itr = Minimiztion::getInstance()->dfaStates.begin(); itr != Minimiztion::getInstance()->dfaStates.end(); itr++) {
+        if (itr->first->checkEndState()) {
             endState.push_back(itr->first);
         } else {
             nonendState.push_back(itr->first);
         }
     }
-    Minimiztion::getInstance()->partitions.push_back(nonendState);
-    Minimiztion::getInstance()->partitions.push_back(endState);
-    Minimiztion::getInstance()->Minimize(Minimiztion::getInstance()->partitions);
-    dfa->setDTable(Minimiztion::getInstance()->DFAStates);
+    Minimiztion::getInstance()->partts.push_back(nonendState);
+    Minimiztion::getInstance()->partts.push_back(endState);
+    Minimiztion::getInstance()->Minimize(Minimiztion::getInstance()->partts);
+    dfa->setDTable(Minimiztion::getInstance()->dfaStates);
 
     //print table
     op = dfa->getDTable();
     ReadRules::getInstance()->printTable("table", op, MakeGraph::getInstance()->getAlphabet());
 
     //read the test program
-    vector<pair<string, string>> tokens = ReadProg::getInstance()->scanProgramFile("test.txt",  dfa);
-    cout <<"DOOneeeee \n";
+    vector<pair<string, string>> tokens = ReadProg::getInstance()->ReadProgFile("test.txt", dfa);
+   // cout <<"DOOneeeee \n";
     //print the output file
     for(const pair<string, string>&token : tokens){
         cout << token.first  <<" "<<token.second << "\n";
