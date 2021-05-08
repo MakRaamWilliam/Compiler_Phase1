@@ -46,16 +46,19 @@ int main() {
     Minimiztion::getInstance()->Minimize(Minimiztion::getInstance()->partts);
     dfa->setDTable(Minimiztion::getInstance()->dfaStates);
 
-    //print table
+    //make trans table
     op = dfa->getDTable();
-    ReadRules::getInstance()->printTable("table", op, MakeGraph::getInstance()->getAlphabet());
+    ReadRules::getInstance()->makeTransTable("TransTable", op, MakeGraph::getInstance()->getAlphabet());
 
     //read the test program
-    vector<pair<string, string>> tokens = ReadProg::getInstance()->ReadProgFile("test.txt", dfa);
+    vector<pair<string, string>> tokens = ReadProg::getInstance()->ReadProgFile("TestProgram.txt", dfa);
    // cout <<"DOOneeeee \n";
     //print the output file
+    ofstream opfile;
+    opfile.open("output.txt");
     for(const pair<string, string>&token : tokens){
-        cout << token.first  <<" "<<token.second << "\n";
+        cout <<token.second << "\n";
+        opfile << token.second<<"\n";
     }
 
     return 0;

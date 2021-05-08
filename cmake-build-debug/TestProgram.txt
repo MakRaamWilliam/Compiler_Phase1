@@ -1,0 +1,11 @@
+int @sum , cou$nt , # ;
+fl#oat avg ;
+boolean flag ;
+while (pass != 10)
+{
+pass = pass + 1 ;
+if(pass >= 100 )
+ break;
+else
+ continue;
+}

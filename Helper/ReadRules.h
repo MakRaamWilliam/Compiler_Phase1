@@ -16,7 +16,7 @@ public:
 
     vector<LexicalRule *> ReadRuleFile(const string &rulefile, map<string, int> *priorities);
 
-    void printTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alpha);
+    void makeTransTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alpha);
 
     static ReadRules *getInstance();
 

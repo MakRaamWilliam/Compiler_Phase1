@@ -160,18 +160,22 @@ ReadRules *ReadRules::getInstance() {
     return instance;
 }
 
-void ReadRules::printTable(const string &fileName, const map<Node *, map<char, Node *>> &table,
-                                      const set<char> &alpha) {
+void ReadRules::makeTransTable(const string &fileName, const map<Node *, map<char, Node *>> &table,
+                               const set<char> &alpha) {
     ofstream of;
     of.open(fileName + ".trnstb");
     streambuf *buf = of.rdbuf();
     std::ostream stream(buf);
-    stream << left << setw(20) << "states\\input";
+    stream << left << setw(20) << "curr/Next";
     for (char c : alpha) {
         stream << setw(12) << c;
     }
     stream << endl;
+    unordered_set<string> states;
     for (pair<Node *, map<char, Node *>> row : table) {
+        if(states.find(row.first->getName()) != states.end())
+            continue;
+        states.insert(row.first->getName());
         stream << left << setw(20) << row.first->getName();
         for (char c : alpha) {
             stream << setw(12) << row.second.at(c)->getName();
