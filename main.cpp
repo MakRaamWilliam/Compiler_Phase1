@@ -12,7 +12,7 @@ int main() {
     map<string, int> mp_prio{};
 
     vector<LexicalRule*>vec_rule = ReadRules::getInstance()->read_from_file("rules.txt", &mp_prio);
-   // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
+
     vector<NfaGraph *> startsNodes;
     for (LexicalRule *rule:vec_rule) {
         if (rule->getType() != RegularDefinition) {
@@ -52,7 +52,7 @@ int main() {
 
     //read the test program
     vector<pair<string, string>> tokens = ReadProg::getInstance()->scanProgramFile("test.txt",  dfa);
-    cout <<"DOOneeeee \n";
+    
     //print the output file
     for(const pair<string, string>&token : tokens){
         cout << token.first  <<" "<<token.second << "\n";

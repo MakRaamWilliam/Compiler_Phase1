@@ -18,9 +18,7 @@ vector<LexicalRule *> ReadRules::read_from_file(const string &input_file, map<st
     vector<string> puncts;
     vector<string> keywords;
     vector<string> regularExps;
-    // cout<<"IN REeegex\n";
     while (std::getline(file, str)) {
-        //     cout<<"IN REgex\n";
         if (regex_search(str, match, regular_definition_regex)) {
             pair<string, vector<string>> temp;
             temp.first = match.str(1);

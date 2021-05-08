@@ -41,9 +41,8 @@ vector<pair<string, string>> ReadProg::scanWord(string &word) {
         prevState = currentState;
         currentState = this->recognizer->move(currentState, word.at(i));
 
-       // cout<<word.at(i);
+       
         if (currentState->isFinalState()) {
-           // cout<<"curr\n";
             last = i;
             finalState = currentState;
             if (i == word.size() - 1) {
@@ -52,7 +51,6 @@ vector<pair<string, string>> ReadProg::scanWord(string &word) {
                 break;
             }
         } else if (currentState->getName() == "null" && finalState != nullState) {
-           // cout<<"notcurr\n";
             string s = word.substr(first, last - first + 1);
             tokens.emplace_back(s, finalState->getName());
             first = last + 1;

@@ -5,7 +5,7 @@
 
 Minimiztion *Minimiztion::instance = nullptr;
 
-// minimizer function
+
 // void Minimiztion::DFAMinimize(DfaGraph *dfa) {
 
 //     this->partitions.clear();
@@ -31,9 +31,7 @@ Minimiztion *Minimiztion::instance = nullptr;
 //     dfa->setDTable(DFAStates);
 // }
 
-/*
- * minimize the results
- */
+
 vector<vector<Node *>> Minimiztion::Minimize(const vector<vector<Node *>> &partitions) {
 
     vector<vector<Node *>> res;
@@ -81,9 +79,7 @@ vector<vector<Node *>> Minimiztion::Minimize(const vector<vector<Node *>> &parti
     return Minimize(res);
 }
 
-/*
- * update table of the DFAStates
- */
+
 void Minimiztion::updateTable(vector<Node *> temp) {
     if (temp.size() > 1) {
         Node *state = temp.at(0);
@@ -102,9 +98,7 @@ void Minimiztion::updateTable(vector<Node *> temp) {
     }
 }
 
-/*
- * return true if two states are unique
- */
+
 bool Minimiztion::areStatesUnique(const vector<vector<Node *>> &partitions, Node *state1, Node *state2) {
     for (const vector<Node *> &p:partitions) {
 
@@ -115,9 +109,7 @@ bool Minimiztion::areStatesUnique(const vector<vector<Node *>> &partitions, Node
     return false;
 }
 
-/*
- * return true if two states are in the same partition
- */
+
 bool Minimiztion::containedBySamePartition(const vector<vector<Node *>> &partitions, Node *State1, Node *State2) {
 
     for (vector<Node *> p:partitions) {
@@ -128,9 +120,7 @@ bool Minimiztion::containedBySamePartition(const vector<vector<Node *>> &partiti
     return false;
 }
 
-/*
- * return true if partition contain state
- */
+
 bool Minimiztion::containState(const vector<vector<Node *>> &partitions, Node *state) {
 
     for (const vector<Node *> &p:partitions) {
