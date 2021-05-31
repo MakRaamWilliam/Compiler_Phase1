@@ -51,15 +51,31 @@ int main() {
     ReadRules::getInstance()->makeTransTable("TransTable", op, MakeGraph::getInstance()->getAlphabet());
 
     //read the test program
-    vector<pair<string, string>> tokens = ReadProg::getInstance()->ReadProgFile("TestProgram.txt", dfa);
-   // cout <<"DOOneeeee \n";
-    //print the output file
+    ReadProg *read=ReadProg::getInstance();
+    const string word;
+//    fstream file=read->openFile("TestProgram.txt");
+    fstream file;
+    string fileName="TestProgram.txt";
+    file.open(fileName.c_str());
+    pair<string, string> *token = read->ReadProgFile(file, word, dfa);
     ofstream opfile;
     opfile.open("output.txt");
-    for(const pair<string, string>&token : tokens){
-        cout <<token.second << "\n";
-        opfile << token.second<<"\n";
+    while(token!=NULL){
+        cout << token->first << " --> " << token->second << "\n";
+        opfile << token->second<<"\n";
+        token = read->ReadProgFile(file, word, dfa);
     }
+    opfile.close();
+    file.close();
+
+    //print the output file
+//    ofstream opfile;
+//    opfile.open("output.txt");
+//    for(const pair<string, string>&token : token){
+//        cout <<token.first<<" --> "<<token.second << "\n";
+//        opfile << token.second<<"\n";
+//    }
+//    opfile.close();
 
     return 0;
 }
