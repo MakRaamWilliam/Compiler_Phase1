@@ -6,14 +6,14 @@ class ReadProg {
 public:
     static ReadProg *getInstance();
 
-    pair<string, string> *ReadProgFile( fstream &file,string word, DfaGraph *recognizer);
+    vector< pair<string, string>> *ReadProgFile( fstream &file,string word, DfaGraph *recognizer);
 //    fstream openFile(const string &fileName);
 private:
     ReadProg() = default;
 
     static ReadProg *instance;
 
-    pair<string, string> *scanWord(string &word);
+    vector< pair<string, string>> *scanWord(string &word);
 
     DfaGraph *recognizer;
 

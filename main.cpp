@@ -57,13 +57,15 @@ int main() {
     fstream file;
     string fileName="TestProgram.txt";
     file.open(fileName.c_str());
-    pair<string, string> *token = read->ReadProgFile(file, word, dfa);
+    vector< pair<string, string>> *tokens = read->ReadProgFile(file, word, dfa);
     ofstream opfile;
     opfile.open("output.txt");
-    while(token!=NULL){
-        cout << token->first << " --> " << token->second << "\n";
-        opfile << token->second<<"\n";
-        token = read->ReadProgFile(file, word, dfa);
+    while(tokens!=NULL){
+        for(const pair<string, string>&token : *tokens){
+            cout <<token.first<<" --> "<<token.second << "\n";
+            opfile << token.second<<"\n";
+        }
+        tokens = read->ReadProgFile(file, word, dfa);
     }
     opfile.close();
     file.close();

@@ -16,7 +16,7 @@ ReadProg *ReadProg::getInstance() {
 //    return file;
 //}
 
-pair<string, string> *ReadProg::ReadProgFile( fstream &file,string word, DfaGraph *recognizer) {
+vector< pair<string, string>> *ReadProg::ReadProgFile( fstream &file,string word, DfaGraph *recognizer) {
 //    pair<string, string> *token=NULL;
     this->recognizer = recognizer;
 //    ifstream file(fileName);
@@ -40,8 +40,8 @@ pair<string, string> *ReadProg::ReadProgFile( fstream &file,string word, DfaGrap
     return scanWord(word);
 }
 
-pair<string, string> *ReadProg::scanWord(string &word) {
-    pair<string, string> *token=new pair<string, string>;
+vector< pair<string, string>> *ReadProg::scanWord(string &word) {
+    vector< pair<string, string>> *tokens=new vector< pair<string, string>>;
     Node *startState = this->recognizer->getStartState();
     Node *currentState = startState;
     Node *prevState = startState;
@@ -60,17 +60,16 @@ pair<string, string> *ReadProg::scanWord(string &word) {
             finalState = currentState;
             if (i == word.size() - 1) {
                 string s = word.substr(first, last - first + 1);
-                token->first=s;
-                token->second=finalState->getName();
-//                tokens.emplace_back(s, finalState->getName());
+
+                tokens->emplace_back(s, finalState->getName());
                 break;
             }
         } else if (currentState->getName() == "null" && finalState != nullState) {
            // cout<<"notcurr\n";
             string s = word.substr(first, last - first + 1);
-            token->first=s;
-            token->second=finalState->getName();
-//            tokens.emplace_back(s, finalState->getName());
+//            token->first=s;
+//            token->second=finalState->getName();
+            tokens->emplace_back(s, finalState->getName());
             first = last + 1;
             i = last;
             finalState = nullState;
@@ -83,5 +82,5 @@ pair<string, string> *ReadProg::scanWord(string &word) {
             currentState = prevState;
         }
     }
-    return token;
+    return tokens;
 }

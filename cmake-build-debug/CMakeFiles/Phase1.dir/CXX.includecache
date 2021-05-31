@@ -6,67 +6,65 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/DfaGraph.h
 map
 -
 NfaGraph.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/NfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/NfaGraph.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/Edge.h
 iostream
 -
 bits/stdc++.h
 -
 Node.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/Node.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/LexBulider.h
 LexicalRule.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/LexicalRule.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/LexicalRule.h
 iostream
 -
 bits/stdc++.h
 -
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/MakeGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/MakeGraph.h
 NfaGraph.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/NfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/NfaGraph.h
 LexicalRule.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/LexicalRule.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/LexicalRule.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/Minimiztion.h
 DfaGraph.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/DfaGraph.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/NfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/NfaGraph.h
 Node.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/Node.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/NfaToDfa.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/NfaToDfa.h
 DfaGraph.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/DfaGraph.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/Node.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/Node.h
 iostream
 -
 bits/stdc++.h
 -
 Edge.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/Edge.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/Edge.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/ReadProg.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.cpp
+ReadProg.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.h
+
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.h
 DfaGraph.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/DfaGraph.h
 
-C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.cpp
-ReadRules.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.h
-utility
--
-
-C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadRules.h
 iostream
 -
 bits/stdc++.h
@@ -76,21 +74,21 @@ regex
 algorithm
 -
 LexBulider.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/LexBulider.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/LexBulider.h
 DfaGraph.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/DfaGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/DfaGraph.h
 
-C:/Users/makram99/CLionProjects/Phase1/main.cpp
+E:/mine/Third year/Compiler_Phase1-main/main.cpp
 iostream
 -
 Helper/ReadRules.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/ReadRules.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadRules.h
 Helper/MakeGraph.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/MakeGraph.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/MakeGraph.h
 Helper/NfaToDfa.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/NfaToDfa.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/NfaToDfa.h
 Helper/Minimiztion.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/Minimiztion.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/Minimiztion.h
 Helper/ReadProg.h
-C:/Users/makram99/CLionProjects/Phase1/Helper/ReadProg.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.h
 
