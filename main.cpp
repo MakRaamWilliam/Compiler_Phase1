@@ -6,13 +6,12 @@
 #include "Helper/ReadProg.h"
 using namespace std;
 
-int main() {
-
+DfaGraph* phaseOne(){
     // parsing file and build
     map<string, int> mp_prio{};
 
     vector<LexicalRule*>vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
-   // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
+    // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
     vector<NfaGraph *> startsNodes;
     for (LexicalRule *rule:vec_rule) {
         if (rule->getType() != RegularDefinition) {
@@ -49,6 +48,12 @@ int main() {
     //make trans table
     op = dfa->getDTable();
     ReadRules::getInstance()->makeTransTable("TransTable", op, MakeGraph::getInstance()->getAlphabet());
+    return dfa;
+}
+
+int main() {
+
+    DfaGraph* dfa= phaseOne();
 
     //read the test program
     ReadProg *read=ReadProg::getInstance();
