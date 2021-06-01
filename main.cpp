@@ -10,7 +10,6 @@ using namespace std;
 DfaGraph* phaseOne(){
     // parsing file and build
     map<string, int> mp_prio{};
-
     vector<LexicalRule*>vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
     // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
     vector<NfaGraph *> startsNodes;
@@ -54,14 +53,18 @@ DfaGraph* phaseOne(){
 
 int main() {
 
-    DfaGraph* dfa= phaseOne();
+//    DfaGraph* dfa= phaseOne();
+//    ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
 
-//    ReadGrammars::getInstance()->ReadGrammarFile("rules.txt");
-//    cout <<"-----------"<<endl;
+//    ReadGrammars *k=new ReadGrammars();
+//    k->ReadGrammarFile("grammar.txt");
+    ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
+    cout <<"-----------"<<endl;
+
 
 
     //read the test program
-    ReadProg *read=ReadProg::getInstance();
+/*    ReadProg *read=ReadProg::getInstance();
     const string word;
 //    fstream file=read->openFile("TestProgram.txt");
     fstream file;
@@ -89,6 +92,6 @@ int main() {
 //    }
 //    opfile.close();
 
-
+*/
     return 0;
 }

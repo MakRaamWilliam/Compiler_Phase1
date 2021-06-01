@@ -5,6 +5,7 @@
 #include <bits/stdc++.h>
 #include <regex>
 #include <algorithm>
+#include "nonTerminal.h"
 
 using namespace std;
 
@@ -19,21 +20,26 @@ public:
 
     static ReadGrammars *getInstance();
 
+
+
 private:
     regex form;
     smatch match;
 
 private:
-    ReadGrammars();
-
     static ReadGrammars *instance;
 
+    ReadGrammars();
+
+    static vector<string> split(const string &str);
+//
+    static string removeSpaces(string str);
 //
 //    static vector<string> splitSpaces(string splitted);
 //
-//    static string removeSpaces(string str);
+
 //
-//    static vector<string> splitDefinition(const string &str);
+//    static vector<string> split(const string &str);
 //
 //    static vector<string> splitExpression(const string &str);
 //
