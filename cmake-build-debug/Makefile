@@ -357,6 +357,33 @@ Helper/Node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Node.cpp.s
 .PHONY : Helper/Node.cpp.s
 
+Helper/ReadGrammars.obj: Helper/ReadGrammars.cpp.obj
+
+.PHONY : Helper/ReadGrammars.obj
+
+# target to build an object file
+Helper/ReadGrammars.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj
+.PHONY : Helper/ReadGrammars.cpp.obj
+
+Helper/ReadGrammars.i: Helper/ReadGrammars.cpp.i
+
+.PHONY : Helper/ReadGrammars.i
+
+# target to preprocess a source file
+Helper/ReadGrammars.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.i
+.PHONY : Helper/ReadGrammars.cpp.i
+
+Helper/ReadGrammars.s: Helper/ReadGrammars.cpp.s
+
+.PHONY : Helper/ReadGrammars.s
+
+# target to generate assembly for a file
+Helper/ReadGrammars.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.s
+.PHONY : Helper/ReadGrammars.cpp.s
+
 Helper/ReadProg.obj: Helper/ReadProg.cpp.obj
 
 .PHONY : Helper/ReadProg.obj
@@ -471,6 +498,9 @@ help:
 	@echo ... Helper/Node.obj
 	@echo ... Helper/Node.i
 	@echo ... Helper/Node.s
+	@echo ... Helper/ReadGrammars.obj
+	@echo ... Helper/ReadGrammars.i
+	@echo ... Helper/ReadGrammars.s
 	@echo ... Helper/ReadProg.obj
 	@echo ... Helper/ReadProg.i
 	@echo ... Helper/ReadProg.s

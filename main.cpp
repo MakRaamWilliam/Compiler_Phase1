@@ -4,6 +4,7 @@
 #include "Helper/NfaToDfa.h"
 #include "Helper/Minimiztion.h"
 #include "Helper/ReadProg.h"
+#include "Helper/ReadGrammars.h"
 using namespace std;
 
 DfaGraph* phaseOne(){
@@ -55,6 +56,10 @@ int main() {
 
     DfaGraph* dfa= phaseOne();
 
+//    ReadGrammars::getInstance()->ReadGrammarFile("rules.txt");
+//    cout <<"-----------"<<endl;
+
+
     //read the test program
     ReadProg *read=ReadProg::getInstance();
     const string word;
@@ -83,6 +88,7 @@ int main() {
 //        opfile << token.second<<"\n";
 //    }
 //    opfile.close();
+
 
     return 0;
 }

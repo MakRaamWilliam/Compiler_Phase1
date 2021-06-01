@@ -131,6 +131,12 @@
 		<Unit filename="E:/mine/Third year/Compiler_Phase1-main/Helper/Node.h">
 			<Option target="Phase1"/>
 		</Unit>
+		<Unit filename="E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.cpp">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.h">
+			<Option target="Phase1"/>
+		</Unit>
 		<Unit filename="E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.cpp">
 			<Option target="Phase1"/>
 		</Unit>

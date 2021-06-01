@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj"
   "CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj"
   "CMakeFiles/Phase1.dir/Helper/Node.cpp.obj"
+  "CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj"
   "CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj"
   "CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj"
   "CMakeFiles/Phase1.dir/main.cpp.obj"

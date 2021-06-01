@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "E:/mine/Third year/Compiler_Phase1-main/Helper/NfaGraph.cpp" "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/NfaGraph.cpp.obj"
   "E:/mine/Third year/Compiler_Phase1-main/Helper/NfaToDfa.cpp" "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/NfaToDfa.cpp.obj"
   "E:/mine/Third year/Compiler_Phase1-main/Helper/Node.cpp" "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/Node.cpp.obj"
+  "E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.cpp" "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj"
   "E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.cpp" "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj"
   "E:/mine/Third year/Compiler_Phase1-main/Helper/ReadRules.cpp" "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj"
   "E:/mine/Third year/Compiler_Phase1-main/main.cpp" "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir/main.cpp.obj"

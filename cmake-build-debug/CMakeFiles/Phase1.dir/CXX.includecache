@@ -56,9 +56,19 @@ bits/stdc++.h
 Edge.h
 E:/mine/Third year/Compiler_Phase1-main/Helper/Edge.h
 
-E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.cpp
-ReadProg.h
-E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.cpp
+ReadGrammars.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.h
+
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.h
+iostream
+-
+bits/stdc++.h
+-
+regex
+-
+algorithm
+-
 
 E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.h
 DfaGraph.h
@@ -91,4 +101,6 @@ Helper/Minimiztion.h
 E:/mine/Third year/Compiler_Phase1-main/Helper/Minimiztion.h
 Helper/ReadProg.h
 E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.h
+Helper/ReadGrammars.h
+E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.h
 

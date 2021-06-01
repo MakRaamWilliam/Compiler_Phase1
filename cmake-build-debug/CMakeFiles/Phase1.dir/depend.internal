@@ -45,6 +45,9 @@ CMakeFiles/Phase1.dir/Helper/Node.cpp.obj
  E:/mine/Third year/Compiler_Phase1-main/Helper/Edge.h
  E:/mine/Third year/Compiler_Phase1-main/Helper/Node.cpp
  E:/mine/Third year/Compiler_Phase1-main/Helper/Node.h
+CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj
+ E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.cpp
+ E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.h
 CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj
  E:/mine/Third year/Compiler_Phase1-main/Helper/DfaGraph.h
  E:/mine/Third year/Compiler_Phase1-main/Helper/Edge.h
@@ -71,6 +74,7 @@ CMakeFiles/Phase1.dir/main.cpp.obj
  E:/mine/Third year/Compiler_Phase1-main/Helper/NfaGraph.h
  E:/mine/Third year/Compiler_Phase1-main/Helper/NfaToDfa.h
  E:/mine/Third year/Compiler_Phase1-main/Helper/Node.h
+ E:/mine/Third year/Compiler_Phase1-main/Helper/ReadGrammars.h
  E:/mine/Third year/Compiler_Phase1-main/Helper/ReadProg.h
  E:/mine/Third year/Compiler_Phase1-main/Helper/ReadRules.h
  E:/mine/Third year/Compiler_Phase1-main/main.cpp
