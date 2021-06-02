@@ -5,6 +5,7 @@
 #include "Helper/Minimiztion.h"
 #include "Helper/ReadProg.h"
 #include "Helper/ReadGrammars.h"
+#include "Helper/ParserTable.h"
 using namespace std;
 
 DfaGraph* phaseOne(){

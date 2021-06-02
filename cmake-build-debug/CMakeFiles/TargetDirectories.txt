@@ -1,3 +1,3 @@
-E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/Phase1.dir
-E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/makram99/CLionProjects/Compiler_Phase1/cmake-build-debug/CMakeFiles/Phase1.dir
+C:/Users/makram99/CLionProjects/Compiler_Phase1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/makram99/CLionProjects/Compiler_Phase1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
