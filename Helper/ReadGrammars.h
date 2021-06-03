@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 #include <regex>
 #include <algorithm>
-#include "nonTerminal.h"
+#include "production.h"
 
 using namespace std;
 
@@ -14,7 +14,7 @@ class ReadGrammars {
 public:
     virtual ~ReadGrammars() = default;
 
-    void ReadGrammarFile(const string &grammerfile);
+    map<string, production *> ReadGrammarFile(const string &grammerfile);
 
 //    void makeTransTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alpha);
 
@@ -31,8 +31,10 @@ private:
 
     ReadGrammars();
 
-    static vector<string> split(const string &str);
-//
+    static vector< vector< production *> >  split(const string &str,production *t,map<string, production *> &nonterminals,map<string, production *> &terminals);
+    static production* findNonTerminal(string name,map<string, production *> &nonterminals);
+    static production* findTerminal(const string &name,map<string, production *> &terminals);
+
     static string removeSpaces(string str);
 //
 //    static vector<string> splitSpaces(string splitted);

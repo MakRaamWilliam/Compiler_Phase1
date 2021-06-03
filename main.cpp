@@ -58,9 +58,24 @@ int main() {
 
 //    ReadGrammars *k=new ReadGrammars();
 //    k->ReadGrammarFile("grammar.txt");
-    ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
+    map<string, production *> m=ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
     cout <<"-----------"<<endl;
-
+    map<string, production *>::iterator it;
+    int i=1;
+    for(it=m.begin();it!=m.end();it++){
+        cout <<i++<<" - "<<it->second->temp<<endl;
+        cout <<it->first<<" == "<<it->second->value<<endl;
+        vector< vector< production *> > RHS=it->second->RHS;
+        cout <<"size = " <<RHS.size() <<endl;
+        for(int i=0;i<RHS.size();i++){
+            for(int j=0;j<RHS[i].size();j++){
+                cout<<RHS[i][j]->value<<"----";
+            }
+            cout <<endl;
+        }
+        cout <<"eps == "<<it->second->eps<<endl;
+        cout <<"-----------"<<endl;
+    }
 
 
     //read the test program
