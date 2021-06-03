@@ -4,15 +4,14 @@
 #include "Helper/NfaToDfa.h"
 #include "Helper/Minimiztion.h"
 #include "Helper/ReadProg.h"
+#include "Helper/ReadGrammars.h"
 using namespace std;
 
-int main() {
-
+DfaGraph* phaseOne(){
     // parsing file and build
     map<string, int> mp_prio{};
-
     vector<LexicalRule*>vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
-   // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
+    // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
     vector<NfaGraph *> startsNodes;
     for (LexicalRule *rule:vec_rule) {
         if (rule->getType() != RegularDefinition) {
@@ -49,17 +48,65 @@ int main() {
     //make trans table
     op = dfa->getDTable();
     ReadRules::getInstance()->makeTransTable("TransTable", op, MakeGraph::getInstance()->getAlphabet());
+    return dfa;
+}
 
-    //read the test program
-    vector<pair<string, string>> tokens = ReadProg::getInstance()->ReadProgFile("TestProgram.txt", dfa);
-   // cout <<"DOOneeeee \n";
-    //print the output file
-    ofstream opfile;
-    opfile.open("output.txt");
-    for(const pair<string, string>&token : tokens){
-        cout <<token.second << "\n";
-        opfile << token.second<<"\n";
+int main() {
+
+//    DfaGraph* dfa= phaseOne();
+//    ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
+
+//    ReadGrammars *k=new ReadGrammars();
+//    k->ReadGrammarFile("grammar.txt");
+    map<string, production *> m=ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
+    cout <<"-----------"<<endl;
+    map<string, production *>::iterator it;
+    int i=1;
+    for(it=m.begin();it!=m.end();it++){
+        cout <<i++<<" - "<<it->second->temp<<endl;
+        cout <<it->first<<" == "<<it->second->value<<endl;
+        vector< vector< production *> > RHS=it->second->RHS;
+        cout <<"size = " <<RHS.size() <<endl;
+        for(int i=0;i<RHS.size();i++){
+            for(int j=0;j<RHS[i].size();j++){
+                cout<<RHS[i][j]->value<<"----";
+            }
+            cout <<endl;
+        }
+        cout <<"eps == "<<it->second->eps<<endl;
+        cout <<"-----------"<<endl;
     }
 
+
+    //read the test program
+/*    ReadProg *read=ReadProg::getInstance();
+    const string word;
+//    fstream file=read->openFile("TestProgram.txt");
+    fstream file;
+    string fileName="TestProgram.txt";
+    file.open(fileName.c_str());
+    vector< pair<string, string>> *tokens = read->ReadProgFile(file, word, dfa);
+    ofstream opfile;
+    opfile.open("output.txt");
+    while(tokens!=NULL){
+        for(const pair<string, string>&token : *tokens){
+            cout <<token.first<<" --> "<<token.second << "\n";
+            opfile << token.second<<"\n";
+        }
+        tokens = read->ReadProgFile(file, word, dfa);
+    }
+    opfile.close();
+    file.close();
+
+    //print the output file
+//    ofstream opfile;
+//    opfile.open("output.txt");
+//    for(const pair<string, string>&token : token){
+//        cout <<token.first<<" --> "<<token.second << "\n";
+//        opfile << token.second<<"\n";
+//    }
+//    opfile.close();
+
+*/
     return 0;
 }
