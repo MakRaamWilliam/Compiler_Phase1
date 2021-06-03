@@ -1,4 +1,4 @@
-# Install script for directory: E:/mine/Third year/Compiler_Phase1-main
+# Install script for directory: C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/mine/Third year/Compiler_Phase1-main/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

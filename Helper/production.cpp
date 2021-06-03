@@ -1,4 +1,3 @@
-
 #include "production.h"
 
 production::production(string val,productionType type){
@@ -14,4 +13,5 @@ void production::print() {
 //        cout <<endl;
 //    }
 }
+
 #include "production.h"

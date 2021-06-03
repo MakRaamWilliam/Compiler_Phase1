@@ -15,14 +15,19 @@ public:
     string value;
     string temp;
     vector< vector< production *>  > RHS;
+    vector<production*> appearance;
     bool eps;
-
+    map<string,vector<production*>> first;
+    map<string,vector<production*>> follow;
     production(string val,productionType type);
-
-  void print();
-private:
+    void SetFirst(map<string,production *> nonTerminal);
     productionType type;
+    void print();
+private:
+
 };
+
+
 
 
 #endif //PHASE1_NONTERMINAL_H
