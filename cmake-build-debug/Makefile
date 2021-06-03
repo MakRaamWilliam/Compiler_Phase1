@@ -492,6 +492,33 @@ Helper/nonTerminal.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.s
 .PHONY : Helper/nonTerminal.cpp.s
 
+Helper/production.obj: Helper/production.cpp.obj
+
+.PHONY : Helper/production.obj
+
+# target to build an object file
+Helper/production.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/production.cpp.obj
+.PHONY : Helper/production.cpp.obj
+
+Helper/production.i: Helper/production.cpp.i
+
+.PHONY : Helper/production.i
+
+# target to preprocess a source file
+Helper/production.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/production.cpp.i
+.PHONY : Helper/production.cpp.i
+
+Helper/production.s: Helper/production.cpp.s
+
+.PHONY : Helper/production.s
+
+# target to generate assembly for a file
+Helper/production.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/production.cpp.s
+.PHONY : Helper/production.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -567,6 +594,9 @@ help:
 	@echo ... Helper/nonTerminal.obj
 	@echo ... Helper/nonTerminal.i
 	@echo ... Helper/nonTerminal.s
+	@echo ... Helper/production.obj
+	@echo ... Helper/production.i
+	@echo ... Helper/production.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

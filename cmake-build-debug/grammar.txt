@@ -1,2 +1,5 @@
-#bahaa = bahaa2 |sdc
-#asdsa = bahcccaa2 |zxczxc
+#E = T K
+#K = '+' T K | '\L'
+#T = F P
+#P = '*' F P | '\L'
+#F = '('E')' | 'id'

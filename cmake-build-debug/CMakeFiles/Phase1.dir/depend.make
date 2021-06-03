@@ -51,7 +51,7 @@ CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.obj: ../Helper/nonTerminal.h
 
 CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj: ../Helper/ReadGrammars.cpp
 CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj: ../Helper/ReadGrammars.h
-CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj: ../Helper/nonTerminal.h
+CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj: ../Helper/production.h
 
 CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj: ../Helper/DfaGraph.h
 CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj: ../Helper/Edge.h
@@ -72,6 +72,9 @@ CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj: ../Helper/ReadRules.h
 CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.obj: ../Helper/nonTerminal.cpp
 CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.obj: ../Helper/nonTerminal.h
 
+CMakeFiles/Phase1.dir/Helper/production.cpp.obj: ../Helper/production.cpp
+CMakeFiles/Phase1.dir/Helper/production.cpp.obj: ../Helper/production.h
+
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/DfaGraph.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Edge.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/LexBulider.h
@@ -81,10 +84,9 @@ CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Minimiztion.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/NfaGraph.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/NfaToDfa.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Node.h
-CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ParserTable.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ReadGrammars.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ReadProg.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ReadRules.h
-CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/nonTerminal.h
+CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/production.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../main.cpp
 

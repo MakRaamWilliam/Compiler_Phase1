@@ -161,6 +161,12 @@
 		<Unit filename="C:/Users/makram99/CLionProjects/Compiler_Phase1/Helper/nonTerminal.h">
 			<Option target="Phase1"/>
 		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Compiler_Phase1/Helper/production.cpp">
+			<Option target="Phase1"/>
+		</Unit>
+		<Unit filename="C:/Users/makram99/CLionProjects/Compiler_Phase1/Helper/production.h">
+			<Option target="Phase1"/>
+		</Unit>
 		<Unit filename="C:/Users/makram99/CLionProjects/Compiler_Phase1/main.cpp">
 			<Option target="Phase1"/>
 		</Unit>

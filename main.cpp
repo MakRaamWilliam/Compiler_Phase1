@@ -5,7 +5,7 @@
 #include "Helper/Minimiztion.h"
 #include "Helper/ReadProg.h"
 #include "Helper/ReadGrammars.h"
-#include "Helper/ParserTable.h"
+
 using namespace std;
 
 DfaGraph* phaseOne(){
@@ -52,6 +52,30 @@ DfaGraph* phaseOne(){
     return dfa;
 }
 
+void SetFirst(map<string,production *> nonTerminal) {
+    cout << "Firrrrst\n";
+    for (auto it : nonTerminal) {
+        string value = it.first;
+        cout<<value<<"\n";
+        vector<vector<production *>> RHS = it.second->RHS;
+        for (int i = 0; i < RHS.size(); i++) {
+            stack<production *> st;
+            st.push(RHS[i][0]);
+            while (!st.empty()) {
+                production *pr = st.top();
+                st.pop();
+                if (pr->type == terminal) {
+                    it.second->first[pr->value] = RHS[i];
+                    cout<<pr->value <<"  "<<RHS[i][0]->value<<"\n";
+                } else {
+                    for (int k = 0; k < pr->RHS.size(); k++) {
+                        st.push(pr->RHS[k][0]);
+                    }
+                }
+            }
+        }
+    }
+}
 int main() {
 
 //    DfaGraph* dfa= phaseOne();
@@ -59,9 +83,38 @@ int main() {
 
 //    ReadGrammars *k=new ReadGrammars();
 //    k->ReadGrammarFile("grammar.txt");
-    ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
-    cout <<"-----------"<<endl;
+    map<string, production *> m=ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
 
+    SetFirst(m);
+
+    cout <<"-----------"<<endl;
+    map<string, production *>::iterator it;
+    int i=1;
+    for(it=m.begin();it!=m.end();it++){
+        cout<<"nonTerminal "<<it->first<<" has first :\n ";
+        for(auto itr : it->second->first ){
+            cout<<itr.first<<" map to: ";
+            for(auto itr2 : itr.second){
+                cout<<itr2->value;
+            }cout<<"\n";
+        }cout<<"\n";
+    }
+
+
+//    for(it=m.begin();it!=m.end();it++){
+//        cout <<i++<<" - "<<it->second->temp<<endl;
+//        cout <<it->first<<" == "<<it->second->value<<endl;
+//        vector< vector< production *> > RHS=it->second->RHS;
+//        cout <<"size = " <<RHS.size() <<endl;
+//        for(int i=0;i<RHS.size();i++){
+//            for(int j=0;j<RHS[i].size();j++){
+//                cout<<RHS[i][j]->value<<"----";
+//            }
+//            cout <<endl;
+//        }
+//        cout <<"eps == "<<it->second->eps<<endl;
+//        cout <<"-----------"<<endl;
+//    }
 
 
     //read the test program
@@ -83,7 +136,6 @@ int main() {
     }
     opfile.close();
     file.close();
-
     //print the output file
 //    ofstream opfile;
 //    opfile.open("output.txt");
@@ -92,7 +144,6 @@ int main() {
 //        opfile << token.second<<"\n";
 //    }
 //    opfile.close();
-
 */
     return 0;
 }

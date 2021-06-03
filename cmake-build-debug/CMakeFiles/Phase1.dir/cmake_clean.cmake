@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Phase1.dir/Helper/ReadProg.cpp.obj"
   "CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.obj"
   "CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.obj"
+  "CMakeFiles/Phase1.dir/Helper/production.cpp.obj"
   "CMakeFiles/Phase1.dir/main.cpp.obj"
   "Phase1.exe"
   "Phase1.exe.manifest"
