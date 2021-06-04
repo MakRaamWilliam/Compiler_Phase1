@@ -108,16 +108,32 @@ void calcFollow(production *t, vector<production *> nonTerminal) {
                         if(it->RHS[i][j+1]->type==terminal){
                             t->follow.insert({it->RHS[i][j+1]->value,it->RHS[i]});
                         }else{
-                            t->follow.insert(it->RHS[i][j+1]->first.begin(),it->RHS[i][j+1]->first.end());
-                            if((j+1==it->RHS[i].size()-1)&&it->eps== true){
+//                            t->follow.insert(it->RHS[i][j+1]->first.begin(),it->RHS[i][j+1]->first.end());
+//                            if((j+1==it->RHS[i].size()-1)&&it->RHS[i][j+1]->eps== true){
+                            int k=j+1;
+                            for(;k<it->RHS[i].size();k++){
                                 //special case 3
-                                if(it->follow.empty()){
-                                    calcFollow(it,nonTerminal);
+                                if(it->RHS[i][k]->type==terminal){
+                                    t->follow.insert({it->RHS[i][k]->value,it->RHS[i]});
+                                    break;
+                                }else{
+                                    t->follow.insert(it->RHS[i][k]->first.begin(),it->RHS[i][k]->first.end());
+                                    if(it->RHS[i][k]->eps== false)break;
                                 }
-                                t->follow.insert(it->follow.begin(),it->follow.end());
+//                                if(it->follow.empty()){
+//                                    calcFollow(it,nonTerminal);
+//                                }
+//                                t->follow.insert(it->follow.begin(),it->follow.end());
+
+                            }
+                            if((k-1==it->RHS[i].size()-1)&&it->RHS[i][k-1]->eps== true){
+                                if(it->RHS[i][k-1]->follow.empty()){
+                                    calcFollow(it->RHS[i][k-1],nonTerminal);
+                                }
+                                t->follow.insert(it->RHS[i][k-1]->follow.begin(),it->RHS[i][k-1]->follow.end());
                             }
                         }
-                        j++;
+
                     }
                 }
             }
