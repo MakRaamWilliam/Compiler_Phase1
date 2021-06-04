@@ -13,8 +13,8 @@ class ReadGrammars {
 public:
     virtual ~ReadGrammars() = default;
 
-    map<string, production *> ReadGrammarFile(const string &grammerfile);
-
+//    map<string, production *> ReadGrammarFile(const string &grammerfile);
+    vector<production *> ReadGrammarFile(const string &grammerfile);
 //    void makeTransTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alpha);
 
     static ReadGrammars *getInstance();
@@ -31,7 +31,8 @@ private:
     ReadGrammars();
 
     static vector< vector< production *> >  split(const string &str,production *t,map<string, production *> &nonterminals,map<string, production *> &terminals);
-    static production* findNonTerminal(string name,map<string, production *> &nonterminals);
+    static production* findNonTerminalRHS(string name, map<string, production *> &nonterminals, production *t);
+    static production* findNonTerminalLHS(string name, map<string, production *> &nonterminals);
     static production* findTerminal(const string &name,map<string, production *> &terminals);
 
     static string removeSpaces(string str);

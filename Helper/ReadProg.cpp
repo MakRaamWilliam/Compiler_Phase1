@@ -67,7 +67,7 @@ vector< pair<string, string>> *ReadProg::scanWord(string &word) {
         } else if (currentState->getName() == "null" && finalState != nullState) {
            // cout<<"notcurr\n";
             string s = word.substr(first, last - first + 1);
-//            token->first=s;
+//            token->PrFirst=s;
 //            token->second=finalState->getName();
             tokens->emplace_back(s, finalState->getName());
             first = last + 1;

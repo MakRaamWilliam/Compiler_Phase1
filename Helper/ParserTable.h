@@ -1,24 +1,23 @@
-#include "nonTerminal.h"
 #ifndef PHASE1_PARSERTABLE_H
 #define PHASE1_PARSERTABLE_H
 
+#include "production.h"
+
 class ParserTable {
 public:
+    virtual ~ParserTable() = default;
     static ParserTable *getInstance();
     bool isAmbiguity();
-    map<pair<string ,string>,string> getTable(map <string,unordered_set<string>>,map <string,unordered_set<string>>,
-                                              map <string,unordered_set<string>>,vector<string>,vector<string>);
+    void calcFollow(production *t, vector<production *> nonTerminal);
+    void SetFollow(vector<production *> nonTerminal);
+    void SetFirst(vector<production *> nonTerminal);
+    map<pair<production *, string>, vector<production *>> getTable(vector<production *> nonTerminal);
 
 private:
-    ParserTable();
     static ParserTable* instance;
-    bool  flagIsAmbiguity;
-    map<pair<char,char>,string> table;
-    map <string,unordered_set<string>>  first;
-    map <string,unordered_set<string>>  follow ;
-    map<string,unordered_set<string>> grammer;
-    vector <string> terminal ;
-    vector <string> nonTerminal ;
+    ParserTable();
+    map<pair<production *, string>, vector<production *>> table;
+    bool Ambiguity;
 };
 
 

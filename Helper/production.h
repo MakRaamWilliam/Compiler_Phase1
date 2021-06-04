@@ -15,8 +15,10 @@ public:
     string value;
     string temp;
     vector< vector< production *>  > RHS;
+    vector<production*> appearance;
     bool eps;
-    map<string,vector<production*>> first;
+    map<string,vector<production*>> PrFirst;
+    map<string,vector<production*>> follow;
     production(string val,productionType type);
     void SetFirst(map<string,production *> nonTerminal);
     productionType type;
