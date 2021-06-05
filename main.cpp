@@ -70,6 +70,14 @@ int main() {
      table->SetFollow(m);
      map<pair<production *,string>,vector<production *>> symtable = table->getTable(m);
 
+     queue<string> queue;
+     queue.push("c"); queue.push("e");
+     queue.push("a"); queue.push("d");
+     queue.push("b"); queue.push("$");
+
+     table->getOutput(queue,m[0]);
+
+    cout<<m[0]->value<<" asdasdasd\n";
     cout <<"-----------"<<endl;
     cout <<"-----------"<<endl;
 

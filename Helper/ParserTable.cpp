@@ -101,9 +101,9 @@ void ParserTable::SetFollow(vector<production *> nonTerminal){  // E  K  T  P  F
 
 map<pair<production *,  string>, vector<production *>> ParserTable::getTable(vector<production *> nonTerminal) {
      vector<production * > syncVec;
-    syncVec.push_back(new production("Sync",non_terminal));
+    syncVec.push_back(new production("Sync",terminal));
     vector<production * > epsVec;
-    epsVec.push_back(new production("eps",non_terminal));
+    epsVec.push_back(new production("eps",terminal));
     for(auto it : nonTerminal){
         cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
         for(auto itr : it->PrFirst ){
@@ -124,3 +124,51 @@ map<pair<production *,  string>, vector<production *>> ParserTable::getTable(vec
     return table;
 }
 
+void ParserTable::getOutput(queue<string> ip, production *start) {
+    stack<production *> stack;
+    stack.push(new production("$",terminal) );
+    stack.push(start);
+    ofstream opfile;
+    opfile.open("output2.txt");
+    while (!stack.empty()){
+        production *currpr = stack.top();
+        string currstr = ip.front();
+        if(currpr->type == terminal && currpr->value == currstr){
+            opfile << "match: " << currstr <<"\n";
+            cout << "match: " << currstr <<"\n";
+            ip.pop();
+            stack.pop();
+        }else if(currpr->type == terminal){
+            opfile << "Error from terminal \n";
+            cout << "Error from terminal \n";
+            stack.pop();
+        }else if(currpr->type == non_terminal){
+            if(table.find(make_pair(currpr,currstr)) != table.end() ){
+                vector<production *> vec = table[make_pair(currpr,currstr)];
+                if(vec[0]->value == "Sync" && vec[0]->type == terminal ){
+                    opfile <<"Error from Sync\n";
+                    stack.pop();
+                } else{
+                    stack.pop();
+                    opfile <<currpr->value << "-->" ;
+                    cout <<currpr->value << "-->" ;
+                    for(auto it: vec ){
+                        opfile << it->value <<" ";
+                        cout << it->value <<" ";
+                    }opfile<<"\n";
+                    reverse(vec.begin(),vec.end());
+                    for(auto it: vec ){
+                        if(it->value != "eps" && it->value != "Sync")
+                           stack.push(it);
+                    }
+                }
+            } else{
+                opfile <<"Error empty\n";
+                ip.pop();
+            }
+        }
+    }
+}
+bool ParserTable::isAmbiguity() {
+    return Ambiguity;
+}

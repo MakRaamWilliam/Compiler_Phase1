@@ -1,0 +1,10 @@
+S-->A b S 
+A-->c A d 
+match: c
+Error empty
+A-->a 
+match: a
+match: d
+match: b
+S-->eps 
+match: $
