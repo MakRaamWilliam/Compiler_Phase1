@@ -116,7 +116,7 @@ map<pair<production *,  string>, vector<production *>> ParserTable::getTable(vec
             }
             else if(it->eps){
                 table[make_pair(it,itr.first)]= epsVec;
-            } else{
+            } else if (table.find(make_pair(it,itr.first)) == table.end()){
                 table[make_pair(it,itr.first)]= syncVec;
             }
         }
