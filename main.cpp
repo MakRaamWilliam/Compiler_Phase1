@@ -5,12 +5,12 @@
 #include "Helper/Minimiztion.h"
 #include "Helper/ReadProg.h"
 #include "Helper/ReadGrammars.h"
-
+#include "Helper/ParserTable.h"
 void calcFollow(production *pProduction, vector<production *> vector);
 
 using namespace std;
 
-DfaGraph* phaseOne(){
+queue<string> phaseOne(){
     // parsing file and build
     map<string, int> mp_prio{};
     vector<LexicalRule*>vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
@@ -51,131 +51,80 @@ DfaGraph* phaseOne(){
     //make trans table
     op = dfa->getDTable();
     ReadRules::getInstance()->makeTransTable("TransTable", op, MakeGraph::getInstance()->getAlphabet());
-    return dfa;
-}
 
-void SetFirst(vector<production *> nonTerminal) {
-    cout << "Firrrrst\n";
-    for (auto it : nonTerminal) {
-//        string value = it.first;
-        cout<<it->value<<"\n";
-        vector<vector<production *>> RHS = it->RHS;
-        for (int i = 0; i < RHS.size(); i++) {
-            stack<production *> st;
-            st.push(RHS[i][0]);
-            while (!st.empty()) {
-                production *pr = st.top();
-                st.pop();
-                if (pr->type == terminal) {
-                    it->first[pr->value] = RHS[i];
-                    cout<<pr->value <<"  "<<RHS[i][0]->value<<"\n";
-                } else {
-                    for (int k = 0; k < pr->RHS.size(); k++) {
-                        st.push(pr->RHS[k][0]);
-                    }
-                }
-            }
-        }
+    //read the test program
+    vector<pair<string, string>> tokens = ReadProg::getInstance()->ReadProgFile("TestProgram.txt", dfa);
+    // cout <<"DOOneeeee \n";
+    //print the output file
+    ofstream opfile;
+    opfile.open("output.txt");
+    queue<string> opTokens;
+    for(const pair<string, string>&token : tokens){
+        cout <<token.first <<" "<<  token.second << "\n";
+        opfile << token.second<<"\n";
+        opTokens.push(token.second);
     }
+    return opTokens;
 }
 
-void SetFollow(vector<production *> nonTerminal){  // E  K  T  P  F
-    int i=0;
-    vector<production* >vec;
-//    production *f=new production("$",terminal);
-    for (auto it : nonTerminal){
-        if(i++==0) {
-            vec.push_back(it);
-            it->follow["$"] = vec;
-        }
-        calcFollow(it,nonTerminal);
-    }
-}
-
-void calcFollow(production *t, vector<production *> nonTerminal) {
-    vector<production* >vec;
-    for (auto it : t->appearance){
-        for(int i=0;i<it->RHS.size();i++){
-            for(int j=0;j<it->RHS[i].size();j++){
-                if(t==it->RHS[i][j]){
-                    if(j==it->RHS[i].size()-1){
-                        // case 3
-                        if(it->follow.empty()){
-                            calcFollow(it,nonTerminal);
-                        }
-                        t->follow.insert(it->follow.begin(),it->follow.end());
-                    }else{
-                        if(it->RHS[i][j+1]->type==terminal){
-                            t->follow.insert({it->RHS[i][j+1]->value,it->RHS[i]});
-                        }else{
-//                            t->follow.insert(it->RHS[i][j+1]->first.begin(),it->RHS[i][j+1]->first.end());
-//                            if((j+1==it->RHS[i].size()-1)&&it->RHS[i][j+1]->eps== true){
-                            int k=j+1;
-                            for(;k<it->RHS[i].size();k++){
-                                //special case 3
-                                if(it->RHS[i][k]->type==terminal){
-                                    t->follow.insert({it->RHS[i][k]->value,it->RHS[i]});
-                                    break;
-                                }else{
-                                    t->follow.insert(it->RHS[i][k]->first.begin(),it->RHS[i][k]->first.end());
-                                    if(it->RHS[i][k]->eps== false)break;
-                                }
-//                                if(it->follow.empty()){
-//                                    calcFollow(it,nonTerminal);
-//                                }
-//                                t->follow.insert(it->follow.begin(),it->follow.end());
-
-                            }
-                            if((k-1==it->RHS[i].size()-1)&&it->RHS[i][k-1]->eps== true){
-                                if(it->RHS[i][k-1]->follow.empty()){
-                                    calcFollow(it->RHS[i][k-1],nonTerminal);
-                                }
-                                t->follow.insert(it->RHS[i][k-1]->follow.begin(),it->RHS[i][k-1]->follow.end());
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-    }
-
-}
 
 
 int main() {
 
-//    DfaGraph* dfa= phaseOne();
-//    ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
+    queue<string> queue= phaseOne();
+    cout <<"----------------------\n";
+    cout <<"----------------------\n";
 
-//    ReadGrammars *k=new ReadGrammars();
-//    k->ReadGrammarFile("grammar.txt");
+    queue.push("$");
     vector<production *> m=ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
 
-    SetFirst(m);
-    SetFollow(m);
-    cout <<"-----------"<<endl;
+     ParserTable *table = ParserTable::getInstance();
+     table->SetFirst(m);
+     table->SetFollow(m);
+     map<pair<production *,string>,vector<production *>> symtable = table->getTable(m);
+     table->printTable(m);
+    cout <<"----------------------\n";
+    cout <<"----------------------\n";
+
     map<string, production *>::iterator it;
-
-    for(auto it : m){
-        cout<<"nonTerminal "<<it->value<<" has first :\n ";
-        for(auto itr : it->first ){
-            cout<<itr.first<<" map to: ";
-            for(auto itr2 : itr.second){
-                cout<<itr2->value;
-            }cout<<"\n";
+    for(auto it : symtable){
+        cout<<it.first.first->value << ": "<<it.first.second <<": ";
+        for(auto itr : it.second ){
+            cout<<itr->value;
         }cout<<"\n";
     }
+    cout <<"----------------------\n";
+    cout <<"----------------------\n";
 
-    for(auto it : m){
-        cout<<"nonTerminal "<<it->value<<" has follow :\n ";
-        for(auto itr : it->follow ){
-            cout<<itr.first<<" map to: ";
-            for(auto itr2 : itr.second){
-                cout<<itr2->value;
-            }cout<<"\n";
-        }cout<<"\n";
-    }
+    table->getOutput(queue,m[0]);
+
+
+
+
+//    cout <<"----------------------\n";
+//    cout <<"----------------------\n";
+//    for(auto it : m){
+//        cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
+//        for(auto itr : it->PrFirst ){
+//            cout<<itr.first<<" map to: ";
+//            for(auto itr2 : itr.second){
+//                cout<<itr2->value;
+//            }cout<<"\n";
+//        }cout<<" eps=" <<it->eps<<"\n";
+//    }
+//    cout <<"----------------------\n";
+//    cout <<"----------------------\n";
+//    for(auto it : m){
+//        cout<<"nonTerminal "<<it->value<<" has follow :\n ";
+//        for(auto itr : it->follow ){
+//            cout<<itr.first<<" map to: ";
+//            for(auto itr2 : itr.second){
+//                cout<<itr2->value;
+//            }cout<<"\n";
+//        }cout<<"\n";
+//    }
+
+
 
 //    cout <<"-------************************----"<<endl;
 //    int i=1;
@@ -214,7 +163,7 @@ int main() {
     opfile.open("output.txt");
     while(tokens!=NULL){
         for(const pair<string, string>&token : *tokens){
-            cout <<token.first<<" --> "<<token.second << "\n";
+            cout <<token.PrFirst<<" --> "<<token.second << "\n";
             opfile << token.second<<"\n";
         }
         tokens = read->ReadProgFile(file, word, dfa);
@@ -225,7 +174,7 @@ int main() {
 //    ofstream opfile;
 //    opfile.open("output.txt");
 //    for(const pair<string, string>&token : token){
-//        cout <<token.first<<" --> "<<token.second << "\n";
+//        cout <<token.PrFirst<<" --> "<<token.second << "\n";
 //        opfile << token.second<<"\n";
 //    }
 //    opfile.close();

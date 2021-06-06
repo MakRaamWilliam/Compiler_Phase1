@@ -1,37 +1,53 @@
 #include "ReadGrammars.h"
 
-
-
 ReadGrammars *ReadGrammars::instance = nullptr;
 
+production *findNonTerminalLHS(string name, map<string, production *> &nonterminals);
+
 ReadGrammars::ReadGrammars() {
-    this->form = regex(R"((\w+) *= *((\S|\s)+))");
+    this->form = regex(R"((\w+) *= ((\S|\s)+))");
+    this->theRest = regex(R"(\s*\|(\S|\s)+)");
 }
 
 vector<production *> ReadGrammars::ReadGrammarFile(const string &grammarfile) {
     std::ifstream file(grammarfile);
     std::string str;
-    map<string, production *> nonterminals;
-    map<string, production *> terminals;
-    vector<production *> vec;
+    vector< pair<string,string> > lines;
     while (std::getline(file, str)) {
         if (regex_search(str, match, form)) {
-            pair<string, vector<string>> temp;
+            pair<string, string> temp;
             temp.first = match.str(1);
-            string set_string = match.str(2);
             temp.first = removeSpaces(temp.first);
-
-            production *t= findNonTerminalLHS(temp.first, nonterminals);
-            t->temp=str;
+            temp.second= match.str(2);
 
 
-            split(set_string,t,nonterminals,terminals);
-            vec.push_back(t);
+            lines.push_back(temp);
+        }else if(lines.size()!=0 && regex_search(str, match, theRest)){
+//            cout<<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n";
+//            cout<<lines[lines.size()-1].second<<endl;
+            lines[lines.size()-1].second+=match.str(0);
+//            cout<<lines[lines.size()-1].second<<endl;
+
         }
 
     }
+    return parseGrammar(lines);
+}
+vector<production *> ReadGrammars::parseGrammar(vector< pair<string,string> > lines ){
+
+    map<string, production *> nonterminals;
+    map<string, production *> terminals;
+    vector<production *> vec;
+    for(auto line : lines){
+        production *t= findNonTerminalLHS(line.first, nonterminals);
+        split(line.second,t,nonterminals,terminals);
+        vec.push_back(t);
+    }
     return vec;
 }
+
+
+
 ReadGrammars *ReadGrammars::getInstance() {
     if (instance == nullptr) {
         instance = new ReadGrammars;

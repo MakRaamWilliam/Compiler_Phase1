@@ -13,9 +13,9 @@ class ReadGrammars {
 public:
     virtual ~ReadGrammars() = default;
 
-//    map<string, production *> ReadGrammarFile(const string &grammerfile);
-        vector<production *> ReadGrammarFile(const string &grammerfile);
-//    void makeTransTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alpha);
+
+    vector<production *> ReadGrammarFile(const string &grammerfile);
+    vector<production *> parseGrammar(vector< pair<string,string> > lines );
 
     static ReadGrammars *getInstance();
 
@@ -23,6 +23,7 @@ public:
 
 private:
     regex form;
+    regex theRest;
     smatch match;
 
 private:
@@ -36,16 +37,6 @@ private:
     static production* findTerminal(const string &name,map<string, production *> &terminals);
 
     static string removeSpaces(string str);
-//
-//    static vector<string> splitSpaces(string splitted);
-//
-
-//
-//    static vector<string> split(const string &str);
-//
-//    static vector<string> splitExpression(const string &str);
-//
-//    static vector<string> splitEachChar(const string &str);
 
 
 
@@ -54,4 +45,4 @@ private:
 
 };
 
-#endif //PHASE1_READGRAMMARS_H
+#endif

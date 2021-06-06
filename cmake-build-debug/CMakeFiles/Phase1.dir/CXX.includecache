@@ -6,55 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/DfaGraph.h
-map
--
-NfaGraph.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/NfaGraph.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/Edge.h
-iostream
--
-bits/stdc++.h
--
-Node.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/Node.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/LexBulider.h
-LexicalRule.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/LexicalRule.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/LexicalRule.h
-iostream
--
-bits/stdc++.h
--
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/MakeGraph.h
-NfaGraph.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/NfaGraph.h
-LexicalRule.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/LexicalRule.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/Minimiztion.h
-DfaGraph.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/DfaGraph.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/NfaGraph.h
-Node.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/Node.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/NfaToDfa.h
-DfaGraph.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/DfaGraph.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/Node.h
-iostream
--
-bits/stdc++.h
--
-Edge.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/Edge.h
+C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadGrammars.cpp
+ReadGrammars.h
+C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadGrammars.h
 
 C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadGrammars.h
 iostream
@@ -68,24 +22,6 @@ algorithm
 production.h
 C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/production.h
 
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadProg.h
-DfaGraph.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/DfaGraph.h
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadRules.h
-iostream
--
-bits/stdc++.h
--
-regex
--
-algorithm
--
-LexBulider.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/LexBulider.h
-DfaGraph.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/DfaGraph.h
-
 C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/production.h
 iostream
 -
@@ -93,20 +29,4 @@ bits/stdc++.h
 -
 algorithm
 -
-
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/main.cpp
-iostream
--
-Helper/ReadRules.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadRules.h
-Helper/MakeGraph.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/MakeGraph.h
-Helper/NfaToDfa.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/NfaToDfa.h
-Helper/Minimiztion.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/Minimiztion.h
-Helper/ReadProg.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadProg.h
-Helper/ReadGrammars.h
-C:/Users/EL NADER/Desktop/Compiler_Phase1-makrm2/Helper/ReadGrammars.h
 

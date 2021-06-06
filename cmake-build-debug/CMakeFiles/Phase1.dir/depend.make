@@ -47,7 +47,7 @@ CMakeFiles/Phase1.dir/Helper/Node.cpp.obj: ../Helper/Node.h
 
 CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.obj: ../Helper/ParserTable.cpp
 CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.obj: ../Helper/ParserTable.h
-CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.obj: ../Helper/nonTerminal.h
+CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.obj: ../Helper/production.h
 
 CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj: ../Helper/ReadGrammars.cpp
 CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj: ../Helper/ReadGrammars.h
@@ -84,6 +84,7 @@ CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Minimiztion.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/NfaGraph.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/NfaToDfa.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/Node.h
+CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ParserTable.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ReadGrammars.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ReadProg.h
 CMakeFiles/Phase1.dir/main.cpp.obj: ../Helper/ReadRules.h
