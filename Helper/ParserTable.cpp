@@ -139,14 +139,14 @@ void ParserTable::getOutput(queue<string> ip, production *start) {
             ip.pop();
             stack.pop();
         }else if(currpr->type == terminal){
-            opfile << "Error from terminal \n";
+            opfile << "Error from terminal "<<currpr->value<<" " <<  currstr<<"\n";
             cout << "Error from terminal \n";
             stack.pop();
         }else if(currpr->type == non_terminal){
             if(table.find(make_pair(currpr,currstr)) != table.end() ){
                 vector<production *> vec = table[make_pair(currpr,currstr)];
                 if(vec[0]->value == "Sync" && vec[0]->type == terminal ){
-                    opfile <<"Error from Sync\n";
+                    opfile <<"Error from Sync "<<currpr->value <<" "<<currstr<<"\n";
                     stack.pop();
                 } else{
                     stack.pop();

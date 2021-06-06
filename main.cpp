@@ -10,7 +10,7 @@ void calcFollow(production *pProduction, vector<production *> vector);
 
 using namespace std;
 
-DfaGraph* phaseOne(){
+queue<string> phaseOne(){
     // parsing file and build
     map<string, int> mp_prio{};
     vector<LexicalRule*>vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
@@ -51,18 +51,28 @@ DfaGraph* phaseOne(){
     //make trans table
     op = dfa->getDTable();
     ReadRules::getInstance()->makeTransTable("TransTable", op, MakeGraph::getInstance()->getAlphabet());
-    return dfa;
+
+    //read the test program
+    vector<pair<string, string>> tokens = ReadProg::getInstance()->ReadProgFile("TestProgram.txt", dfa);
+    // cout <<"DOOneeeee \n";
+    //print the output file
+    ofstream opfile;
+    opfile.open("output.txt");
+    queue<string> opTokens;
+    for(const pair<string, string>&token : tokens){
+        cout <<token.second << "\n";
+        opfile << token.second<<"\n";
+        opTokens.push(token.second);
+    }
+    return opTokens;
 }
 
 
 
 int main() {
 
-//    DfaGraph* dfa= phaseOne();
-//    ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
-
-//    ReadGrammars *k=new ReadGrammars();
-//    k->ReadGrammarFile("grammar.txt");
+    queue<string> queue= phaseOne();
+    queue.push("$");
     vector<production *> m=ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
 
      ParserTable *table = ParserTable::getInstance();
@@ -70,10 +80,10 @@ int main() {
      table->SetFollow(m);
      map<pair<production *,string>,vector<production *>> symtable = table->getTable(m);
 
-     queue<string> queue;
-     queue.push("c"); queue.push("e");
-     queue.push("a"); queue.push("d");
-     queue.push("b"); queue.push("$");
+//     queue<string> queue;
+//     queue.push("c"); queue.push("e");
+//     queue.push("a"); queue.push("d");
+//     queue.push("b"); queue.push("$");
 
      table->getOutput(queue,m[0]);
 
