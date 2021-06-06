@@ -12,10 +12,9 @@ ParserTable *ParserTable::getInstance() {
     return instance;
 }
 void ParserTable::SetFirst(vector<production *> nonTerminal) {
-    cout << "Firrrrst\n";
     for (auto it : nonTerminal) {
 //        string value = it.PrFirst;
-        cout<<it->value<<"\n";
+       // cout<<it->value<<"\n";
         vector<vector<production *>> RHS = it->RHS;
         for (int i = 0; i < RHS.size(); i++) {
             stack<production *> st;
@@ -25,7 +24,7 @@ void ParserTable::SetFirst(vector<production *> nonTerminal) {
                 st.pop();
                 if (pr->type == terminal) {
                     it->PrFirst[pr->value] = RHS[i];
-                    cout<<pr->value <<"  "<<RHS[i][0]->value<<"\n";
+                   // cout<<pr->value <<"  "<<RHS[i][0]->value<<"\n";
                 } else {
                     for (int k = 0; k < pr->RHS.size(); k++) {
                         st.push(pr->RHS[k][0]);
@@ -105,12 +104,14 @@ map<pair<production *,  string>, vector<production *>> ParserTable::getTable(vec
     vector<production * > epsVec;
     epsVec.push_back(new production("eps",terminal));
     for(auto it : nonTerminal){
-        cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
+     //   cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
         for(auto itr : it->PrFirst ){
-            cout<<itr.first<<" map to: ";
+          //  cout<<itr.first<<" map to: ";
+            terminalSet.insert(itr.first);
             table[make_pair(it,itr.first)]=itr.second;
         }
         for(auto itr : it->follow){
+            terminalSet.insert(itr.first);
             if(table.find(make_pair(it,itr.first)) != table.end() && it->eps ){
                 Ambiguity = true;
             }
@@ -124,46 +125,86 @@ map<pair<production *,  string>, vector<production *>> ParserTable::getTable(vec
     return table;
 }
 
+void ParserTable::printTable(vector<production *> nonTerminal) {
+    ofstream of;
+    of.open(  "ParserTable.trnstb");
+    streambuf *buf = of.rdbuf();
+    std::ostream stream(buf);
+    stream << left << setw(60) << "NonTerminal/Terminal";
+    for (string str : terminalSet ) {
+        stream << setw(60) << str;
+    }
+    stream << "\n";
+    for (auto it : nonTerminal){
+
+        stream << left << setw(60) << it->value;
+        for (string str : terminalSet ) {
+            if(table.find(make_pair(it,str)) != table.end()) {
+                string tm= "";
+                for(auto it2 : table[make_pair(it, str)] ){
+                    tm+=it2->value + " ";
+                }
+                stream << setw(60) << tm;
+            }
+            else
+                stream << setw(60) << "Error";
+        }
+        stream << endl;
+    }
+
+}
+
+
 void ParserTable::getOutput(queue<string> ip, production *start) {
     stack<production *> stack;
+    vector<string> opstack;
     stack.push(new production("$",terminal) );
     stack.push(start);
+    opstack.push_back(start->value);
     ofstream opfile;
     opfile.open("output2.txt");
     while (!stack.empty()){
+        for(auto it : opstack){
+            opfile << it <<" ";
+        }opfile<<"\n";
         production *currpr = stack.top();
         string currstr = ip.front();
         if(currpr->type == terminal && currpr->value == currstr){
-            opfile << "match: " << currstr <<"\n";
+           // opfile << "match: " << currstr <<"\n";
             cout << "match: " << currstr <<"\n";
             ip.pop();
             stack.pop();
+            opstack.pop_back();
         }else if(currpr->type == terminal){
-            opfile << "Error from terminal "<<currpr->value<<" " <<  currstr<<"\n";
+            //opfile << "Error from terminal "<<currpr->value<<" " <<  currstr<<"\n";
             cout << "Error from terminal \n";
             stack.pop();
+            opstack.pop_back();
         }else if(currpr->type == non_terminal){
             if(table.find(make_pair(currpr,currstr)) != table.end() ){
                 vector<production *> vec = table[make_pair(currpr,currstr)];
                 if(vec[0]->value == "Sync" && vec[0]->type == terminal ){
-                    opfile <<"Error from Sync "<<currpr->value <<" "<<currstr<<"\n";
+                    cout <<"Error from Sync "<<currpr->value <<" "<<currstr<<"\n";
                     stack.pop();
+                    opstack.pop_back();
                 } else{
                     stack.pop();
-                    opfile <<currpr->value << "-->" ;
+                    opstack.pop_back();
+                   // opfile <<currpr->value << "-->" ;
                     cout <<currpr->value << "-->" ;
                     for(auto it: vec ){
-                        opfile << it->value <<" ";
+                       // opfile << it->value <<" ";
                         cout << it->value <<" ";
-                    }opfile<<"\n";
+                    }cout<<"\n";
                     reverse(vec.begin(),vec.end());
                     for(auto it: vec ){
                         if(it->value != "eps" && it->value != "Sync")
                            stack.push(it);
+                           opstack.push_back(it->value);
                     }
                 }
             } else{
-                opfile <<"Error empty\n";
+                cout <<"Error empty\n";
                 ip.pop();
             }
         }
@@ -172,3 +213,4 @@ void ParserTable::getOutput(queue<string> ip, production *start) {
 bool ParserTable::isAmbiguity() {
     return Ambiguity;
 }
+

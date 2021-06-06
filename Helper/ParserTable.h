@@ -12,6 +12,7 @@ public:
     void SetFollow(vector<production *> nonTerminal);
     void SetFirst(vector<production *> nonTerminal);
     map<pair<production *, string>, vector<production *>> getTable(vector<production *> nonTerminal);
+    void printTable(vector<production *> nonTerminal);
     void getOutput(queue<string>, production *start);
 
 private:
@@ -20,6 +21,7 @@ private:
     map<pair<production *, string>, vector<production *>> table;
     bool Ambiguity;
     queue<string> ip;
+    unordered_set<string> terminalSet;
 };
 
 

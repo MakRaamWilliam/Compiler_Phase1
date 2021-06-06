@@ -60,7 +60,7 @@ queue<string> phaseOne(){
     opfile.open("output.txt");
     queue<string> opTokens;
     for(const pair<string, string>&token : tokens){
-        cout <<token.second << "\n";
+        cout <<token.first <<" "<<  token.second << "\n";
         opfile << token.second<<"\n";
         opTokens.push(token.second);
     }
@@ -72,6 +72,9 @@ queue<string> phaseOne(){
 int main() {
 
     queue<string> queue= phaseOne();
+    cout <<"----------------------\n";
+    cout <<"----------------------\n";
+
     queue.push("$");
     vector<production *> m=ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
 
@@ -79,17 +82,9 @@ int main() {
      table->SetFirst(m);
      table->SetFollow(m);
      map<pair<production *,string>,vector<production *>> symtable = table->getTable(m);
-
-//     queue<string> queue;
-//     queue.push("c"); queue.push("e");
-//     queue.push("a"); queue.push("d");
-//     queue.push("b"); queue.push("$");
-
-     table->getOutput(queue,m[0]);
-
-    cout<<m[0]->value<<" asdasdasd\n";
-    cout <<"-----------"<<endl;
-    cout <<"-----------"<<endl;
+     table->printTable(m);
+    cout <<"----------------------\n";
+    cout <<"----------------------\n";
 
     map<string, production *>::iterator it;
     for(auto it : symtable){
@@ -98,29 +93,36 @@ int main() {
             cout<<itr->value;
         }cout<<"\n";
     }
+    cout <<"----------------------\n";
+    cout <<"----------------------\n";
 
-    cout <<"-----------"<<endl;
-    cout <<"-----------"<<endl;
+    table->getOutput(queue,m[0]);
 
-    for(auto it : m){
-        cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
-        for(auto itr : it->PrFirst ){
-            cout<<itr.first<<" map to: ";
-            for(auto itr2 : itr.second){
-                cout<<itr2->value;
-            }cout<<"\n";
-        }cout<<" eps=" <<it->eps<<"\n";
-    }
 
-    for(auto it : m){
-        cout<<"nonTerminal "<<it->value<<" has follow :\n ";
-        for(auto itr : it->follow ){
-            cout<<itr.first<<" map to: ";
-            for(auto itr2 : itr.second){
-                cout<<itr2->value;
-            }cout<<"\n";
-        }cout<<"\n";
-    }
+
+
+//    cout <<"----------------------\n";
+//    cout <<"----------------------\n";
+//    for(auto it : m){
+//        cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
+//        for(auto itr : it->PrFirst ){
+//            cout<<itr.first<<" map to: ";
+//            for(auto itr2 : itr.second){
+//                cout<<itr2->value;
+//            }cout<<"\n";
+//        }cout<<" eps=" <<it->eps<<"\n";
+//    }
+//    cout <<"----------------------\n";
+//    cout <<"----------------------\n";
+//    for(auto it : m){
+//        cout<<"nonTerminal "<<it->value<<" has follow :\n ";
+//        for(auto itr : it->follow ){
+//            cout<<itr.first<<" map to: ";
+//            for(auto itr2 : itr.second){
+//                cout<<itr2->value;
+//            }cout<<"\n";
+//        }cout<<"\n";
+//    }
 
 
 
