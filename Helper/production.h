@@ -7,26 +7,30 @@
 
 using namespace std;
 enum productionType {
-    terminal,non_terminal
+    terminal, non_terminal
 };
 
 class production {
 public:
     string value;
     string temp;
-    vector< vector< production *>  > RHS;
+    vector<vector<production *> > RHS;
+    vector<production *> appearance;
     bool eps;
+    map<string, vector<production *>> PrFirst;
+    map<string, vector<production *>> follow;
 
-    production(string val,productionType type);
-    void SetFirst(map<string,production *> nonTerminal);
+    production(string val, productionType type);
 
-  void print();
-private:
+    void SetFirst(map<string, production *> nonTerminal);
+
     productionType type;
-    map<string,vector<production*>> first;
+
+    void print();
+
+private:
+
 };
-
-
 
 
 #endif //PHASE1_NONTERMINAL_H

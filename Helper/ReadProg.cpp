@@ -2,46 +2,43 @@
 
 ReadProg *ReadProg::instance = nullptr;
 
-ReadProg *ReadProg::getInstance() {
+ReadProg *ReadProg::getInstance(DfaGraph *DFA) {
 
     if (instance == nullptr) {
         instance = new ReadProg();
+        instance->recognizer = DFA;
     }
     return instance;
 }
+string ReadProg::ReadWord(ifstream &file){
+    if(this->qu.size()==0){
+        this->qu = ReadProgFile(file);
+        if(this->qu.size()==0)return "";
 
-//fstream ReadProg::openFile(const string &fileName){
-//    fstream file;
-//    file.open(fileName.c_str());
-//    return file;
-//}
+    }
+    string s = this->qu.front();
+    this->qu.pop();
+    return s;
 
-vector< pair<string, string>> *ReadProg::ReadProgFile( fstream &file,string word, DfaGraph *recognizer) {
-//    pair<string, string> *token=NULL;
-    this->recognizer = recognizer;
-//    ifstream file(fileName);
-//    string line;
-//    vector<string> words{};
-//    while (getline(file, line)) {
-//        istringstream iss(line);
-//        vector<string> results((istream_iterator<string>(iss)), istream_iterator<string>());
-//        words.insert(words.end(), results.begin(), results.end());
-//    }
-        if(file >> word) { //take word and print
-//            words.push_back(word);
-        }else return NULL;
-
-
-//    for (string s : words) {
-//        pair<string, string> temp = scanWord(s);
-//        tokens.insert(tokens.end(), temp.begin(), temp.end());
-//    }
-
-    return scanWord(word);
 }
 
-vector< pair<string, string>> *ReadProg::scanWord(string &word) {
-    vector< pair<string, string>> *tokens=new vector< pair<string, string>>;
+queue<string> ReadProg::ReadProgFile(ifstream &file) {
+    queue<string> tokens{};
+    string word;
+    vector<string> words{};
+    if (file >> word) {
+        vector<pair<string, string>> words=scanWord(word);
+        queue<string> q;
+        for (pair<string, string> s : words) {
+            q.push(s.second);
+         }
+        return q;
+    }
+    return tokens;
+}
+
+vector<pair<string, string>> ReadProg::scanWord(string &word) {
+    vector<pair<string, string>> tokens{};
     Node *startState = this->recognizer->getStartState();
     Node *currentState = startState;
     Node *prevState = startState;
@@ -53,30 +50,27 @@ vector< pair<string, string>> *ReadProg::scanWord(string &word) {
         prevState = currentState;
         currentState = this->recognizer->move(currentState, word.at(i));
 
-       // cout<<word.at(i);
+        // cout<<word.at(i);
         if (currentState->checkEndState()) {
-           // cout<<"curr\n";
+            // cout<<"curr\n";
             last = i;
             finalState = currentState;
             if (i == word.size() - 1) {
                 string s = word.substr(first, last - first + 1);
-
-                tokens->emplace_back(s, finalState->getName());
+                tokens.emplace_back(s, finalState->getName());
                 break;
             }
         } else if (currentState->getName() == "null" && finalState != nullState) {
-           // cout<<"notcurr\n";
+            // cout<<"notcurr\n";
             string s = word.substr(first, last - first + 1);
-//            token->first=s;
-//            token->second=finalState->getName();
-            tokens->emplace_back(s, finalState->getName());
+            tokens.emplace_back(s, finalState->getName());
             first = last + 1;
             i = last;
             finalState = nullState;
             currentState = startState;
         }
         else if( currentState ==  this->recognizer->nullNode){
-          //  cout<<"in elseeee "<< word.at(i)<<"\n";
+            //  cout<<"in elseeee "<< word.at(i)<<"\n";
             word=word.erase(i,1);
             i--;
             currentState = prevState;

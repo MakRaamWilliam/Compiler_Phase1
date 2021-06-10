@@ -57,19 +57,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\makram99\CLionProjects\Phase1
+CMAKE_SOURCE_DIR = "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -77,7 +77,7 @@ CMAKE_BINARY_DIR = C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"E:\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -88,7 +88,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"E:\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -98,9 +98,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug\CMakeFiles" "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\makram99\CLionProjects\Phase1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -357,6 +357,60 @@ Helper/Node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/Node.cpp.s
 .PHONY : Helper/Node.cpp.s
 
+Helper/ParserTable.obj: Helper/ParserTable.cpp.obj
+
+.PHONY : Helper/ParserTable.obj
+
+# target to build an object file
+Helper/ParserTable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.obj
+.PHONY : Helper/ParserTable.cpp.obj
+
+Helper/ParserTable.i: Helper/ParserTable.cpp.i
+
+.PHONY : Helper/ParserTable.i
+
+# target to preprocess a source file
+Helper/ParserTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.i
+.PHONY : Helper/ParserTable.cpp.i
+
+Helper/ParserTable.s: Helper/ParserTable.cpp.s
+
+.PHONY : Helper/ParserTable.s
+
+# target to generate assembly for a file
+Helper/ParserTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ParserTable.cpp.s
+.PHONY : Helper/ParserTable.cpp.s
+
+Helper/ReadGrammars.obj: Helper/ReadGrammars.cpp.obj
+
+.PHONY : Helper/ReadGrammars.obj
+
+# target to build an object file
+Helper/ReadGrammars.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.obj
+.PHONY : Helper/ReadGrammars.cpp.obj
+
+Helper/ReadGrammars.i: Helper/ReadGrammars.cpp.i
+
+.PHONY : Helper/ReadGrammars.i
+
+# target to preprocess a source file
+Helper/ReadGrammars.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.i
+.PHONY : Helper/ReadGrammars.cpp.i
+
+Helper/ReadGrammars.s: Helper/ReadGrammars.cpp.s
+
+.PHONY : Helper/ReadGrammars.s
+
+# target to generate assembly for a file
+Helper/ReadGrammars.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadGrammars.cpp.s
+.PHONY : Helper/ReadGrammars.cpp.s
+
 Helper/ReadProg.obj: Helper/ReadProg.cpp.obj
 
 .PHONY : Helper/ReadProg.obj
@@ -410,6 +464,60 @@ Helper/ReadRules.s: Helper/ReadRules.cpp.s
 Helper/ReadRules.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.s
 .PHONY : Helper/ReadRules.cpp.s
+
+Helper/nonTerminal.obj: Helper/nonTerminal.cpp.obj
+
+.PHONY : Helper/nonTerminal.obj
+
+# target to build an object file
+Helper/nonTerminal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.obj
+.PHONY : Helper/nonTerminal.cpp.obj
+
+Helper/nonTerminal.i: Helper/nonTerminal.cpp.i
+
+.PHONY : Helper/nonTerminal.i
+
+# target to preprocess a source file
+Helper/nonTerminal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.i
+.PHONY : Helper/nonTerminal.cpp.i
+
+Helper/nonTerminal.s: Helper/nonTerminal.cpp.s
+
+.PHONY : Helper/nonTerminal.s
+
+# target to generate assembly for a file
+Helper/nonTerminal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.s
+.PHONY : Helper/nonTerminal.cpp.s
+
+Helper/production.obj: Helper/production.cpp.obj
+
+.PHONY : Helper/production.obj
+
+# target to build an object file
+Helper/production.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/production.cpp.obj
+.PHONY : Helper/production.cpp.obj
+
+Helper/production.i: Helper/production.cpp.i
+
+.PHONY : Helper/production.i
+
+# target to preprocess a source file
+Helper/production.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/production.cpp.i
+.PHONY : Helper/production.cpp.i
+
+Helper/production.s: Helper/production.cpp.s
+
+.PHONY : Helper/production.s
+
+# target to generate assembly for a file
+Helper/production.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/production.cpp.s
+.PHONY : Helper/production.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -471,12 +579,24 @@ help:
 	@echo ... Helper/Node.obj
 	@echo ... Helper/Node.i
 	@echo ... Helper/Node.s
+	@echo ... Helper/ParserTable.obj
+	@echo ... Helper/ParserTable.i
+	@echo ... Helper/ParserTable.s
+	@echo ... Helper/ReadGrammars.obj
+	@echo ... Helper/ReadGrammars.i
+	@echo ... Helper/ReadGrammars.s
 	@echo ... Helper/ReadProg.obj
 	@echo ... Helper/ReadProg.i
 	@echo ... Helper/ReadProg.s
 	@echo ... Helper/ReadRules.obj
 	@echo ... Helper/ReadRules.i
 	@echo ... Helper/ReadRules.s
+	@echo ... Helper/nonTerminal.obj
+	@echo ... Helper/nonTerminal.i
+	@echo ... Helper/nonTerminal.s
+	@echo ... Helper/production.obj
+	@echo ... Helper/production.i
+	@echo ... Helper/production.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

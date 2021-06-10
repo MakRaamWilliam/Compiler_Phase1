@@ -4,16 +4,19 @@
 
 class ReadProg {
 public:
-    static ReadProg *getInstance();
+    static ReadProg *getInstance(DfaGraph *recognizer);
 
-    vector< pair<string, string>> *ReadProgFile( fstream &file,string word, DfaGraph *recognizer);
-//    fstream openFile(const string &fileName);
+    queue<string> ReadProgFile(ifstream &file);
+    string ReadWord(ifstream &file);
+
 private:
     ReadProg() = default;
 
     static ReadProg *instance;
 
-    vector< pair<string, string>> *scanWord(string &word);
+    queue<string> qu;
+
+    vector<pair<string, string>> scanWord(string &word);
 
     DfaGraph *recognizer;
 
