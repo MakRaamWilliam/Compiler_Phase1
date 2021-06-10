@@ -2,7 +2,7 @@
 ParserTable *ParserTable::instance = nullptr;
 
 ParserTable::ParserTable() {
-
+   Ambiguity = false;
 }
 
 ParserTable *ParserTable::getInstance() {
@@ -14,7 +14,7 @@ ParserTable *ParserTable::getInstance() {
 void ParserTable::SetFirst(vector<production *> nonTerminal) {
     for (auto it : nonTerminal) {
 //        string value = it.PrFirst;
-       // cout<<it->value<<"\n";
+        // cout<<it->value<<"\n";
         vector<vector<production *>> RHS = it->RHS;
         for (int i = 0; i < RHS.size(); i++) {
             stack<production *> st;
@@ -24,7 +24,7 @@ void ParserTable::SetFirst(vector<production *> nonTerminal) {
                 st.pop();
                 if (pr->type == terminal) {
                     it->PrFirst[pr->value] = RHS[i];
-                   // cout<<pr->value <<"  "<<RHS[i][0]->value<<"\n";
+                    // cout<<pr->value <<"  "<<RHS[i][0]->value<<"\n";
                 } else {
                     for (int k = 0; k < pr->RHS.size(); k++) {
                         st.push(pr->RHS[k][0]);
@@ -99,14 +99,14 @@ void ParserTable::SetFollow(vector<production *> nonTerminal){  // E  K  T  P  F
 }
 
 map<pair<production *,  string>, vector<production *>> ParserTable::getTable(vector<production *> nonTerminal) {
-     vector<production * > syncVec;
+    vector<production * > syncVec;
     syncVec.push_back(new production("Sync",terminal));
     vector<production * > epsVec;
     epsVec.push_back(new production("eps",terminal));
     for(auto it : nonTerminal){
-     //   cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
+        //   cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
         for(auto itr : it->PrFirst ){
-          //  cout<<itr.first<<" map to: ";
+            //  cout<<itr.first<<" map to: ";
             terminalSet.insert(itr.first);
             table[make_pair(it,itr.first)]=itr.second;
         }
@@ -170,14 +170,14 @@ void ParserTable::getOutput(queue<string> ip, production *start) {
         production *currpr = stack.top();
         string currstr = ip.front();
         if(currpr->type == terminal && currpr->value == currstr){
-           // opfile << "match: " << currstr <<"\n";
+            // opfile << "match: " << currstr <<"\n";
             cout << "match: " << currstr <<"\n";
             ip.pop();
             stack.pop();
             opstack.pop_back();
         }else if(currpr->type == terminal){
             //opfile << "Error from terminal "<<currpr->value<<" " <<  currstr<<"\n";
-            cout << "Error from terminal \n";
+            cout << "Error from terminal "<< currstr <<" "<<currpr->value<<"\n";
             stack.pop();
             opstack.pop_back();
         }else if(currpr->type == non_terminal){
@@ -190,21 +190,22 @@ void ParserTable::getOutput(queue<string> ip, production *start) {
                 } else{
                     stack.pop();
                     opstack.pop_back();
-                   // opfile <<currpr->value << "-->" ;
+                    // opfile <<currpr->value << "-->" ;
                     cout <<currpr->value << "-->" ;
                     for(auto it: vec ){
-                       // opfile << it->value <<" ";
+                        // opfile << it->value <<" ";
                         cout << it->value <<" ";
                     }cout<<"\n";
                     reverse(vec.begin(),vec.end());
                     for(auto it: vec ){
-                        if(it->value != "eps" && it->value != "Sync")
-                           stack.push(it);
-                           opstack.push_back(it->value);
+                        if(it->value != "eps" && it->value != "Sync") {
+                            stack.push(it);
+                            opstack.push_back(it->value);
+                        }
                     }
                 }
             } else{
-                cout <<"Error empty\n";
+                cout <<"Error empty " << currstr <<" "<<currpr->value<<"\n";
                 ip.pop();
             }
         }
@@ -213,4 +214,3 @@ void ParserTable::getOutput(queue<string> ip, production *start) {
 bool ParserTable::isAmbiguity() {
     return Ambiguity;
 }
-

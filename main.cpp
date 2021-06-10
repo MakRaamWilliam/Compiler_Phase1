@@ -6,14 +6,15 @@
 #include "Helper/ReadProg.h"
 #include "Helper/ReadGrammars.h"
 #include "Helper/ParserTable.h"
+
 void calcFollow(production *pProduction, vector<production *> vector);
 
 using namespace std;
 
-queue<string> phaseOne(){
+queue<string> phaseOne() {
     // parsing file and build
     map<string, int> mp_prio{};
-    vector<LexicalRule*>vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
+    vector<LexicalRule *> vec_rule = ReadRules::getInstance()->ReadRuleFile("rules.txt", &mp_prio);
     // NfaGraph* nfa = MakeGraph::getInstance()->buildNFAFromLexicalRules(vec_rule, mp_prio);
     vector<NfaGraph *> startsNodes;
     for (LexicalRule *rule:vec_rule) {
@@ -26,7 +27,7 @@ queue<string> phaseOne(){
 
 
     //Convert  from nfa to dfa
-    DfaGraph* dfa = NfaToDfa::getInstance()->Convert(nfa, MakeGraph::getInstance()->getAlphabet());
+    DfaGraph *dfa = NfaToDfa::getInstance()->Convert(nfa, MakeGraph::getInstance()->getAlphabet());
     map<Node *, map<char, Node *>> op = dfa->getDTable();
 
 
@@ -36,7 +37,8 @@ queue<string> phaseOne(){
     vector<Node *> endState;
     vector<Node *> nonendState;
     map<Node *, map<char, Node *>>::iterator itr;
-    for (itr = Minimiztion::getInstance()->dfaStates.begin(); itr != Minimiztion::getInstance()->dfaStates.end(); itr++) {
+    for (itr = Minimiztion::getInstance()->dfaStates.begin();
+         itr != Minimiztion::getInstance()->dfaStates.end(); itr++) {
         if (itr->first->checkEndState()) {
             endState.push_back(itr->first);
         } else {
@@ -59,125 +61,48 @@ queue<string> phaseOne(){
     ofstream opfile;
     opfile.open("output.txt");
     queue<string> opTokens;
-    for(const pair<string, string>&token : tokens){
-        cout <<token.first <<" "<<  token.second << "\n";
-        opfile << token.second<<"\n";
+    for (const pair<string, string> &token : tokens) {
+        cout << token.first << " " << token.second << "\n";
+        opfile << token.second << "\n";
         opTokens.push(token.second);
     }
     return opTokens;
 }
 
 
-
 int main() {
 
-    queue<string> queue= phaseOne();
-    cout <<"----------------------\n";
-    cout <<"----------------------\n";
+    queue<string> queue = phaseOne();
+    cout << "----------------------\n";
+    cout << "----------------------\n";
 
     queue.push("$");
-    vector<production *> m=ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
+    vector<production *> m = ReadGrammars::getInstance()->ReadGrammarFile("grammar.txt");
 
-     ParserTable *table = ParserTable::getInstance();
-     table->SetFirst(m);
-     table->SetFollow(m);
-     map<pair<production *,string>,vector<production *>> symtable = table->getTable(m);
-     table->printTable(m);
-    cout <<"----------------------\n";
-    cout <<"----------------------\n";
+    ParserTable *table = ParserTable::getInstance();
+    table->SetFirst(m);
+    table->SetFollow(m);
+    map<pair < production * , string>, vector<production *>>
+    symtable = table->getTable(m);
+    table->printTable(m);
+    cout << "----------------------\n";
+    cout << "----------------------\n";
 
     map<string, production *>::iterator it;
-    for(auto it : symtable){
-        cout<<it.first.first->value << ": "<<it.first.second <<": ";
-        for(auto itr : it.second ){
-            cout<<itr->value;
-        }cout<<"\n";
-    }
-    cout <<"----------------------\n";
-    cout <<"----------------------\n";
-
-    table->getOutput(queue,m[0]);
-
-
-
-
-//    cout <<"----------------------\n";
-//    cout <<"----------------------\n";
-//    for(auto it : m){
-//        cout<<"nonTerminal "<<it->value<<" has PrFirst :\n ";
-//        for(auto itr : it->PrFirst ){
-//            cout<<itr.first<<" map to: ";
-//            for(auto itr2 : itr.second){
-//                cout<<itr2->value;
-//            }cout<<"\n";
-//        }cout<<" eps=" <<it->eps<<"\n";
-//    }
-//    cout <<"----------------------\n";
-//    cout <<"----------------------\n";
-//    for(auto it : m){
-//        cout<<"nonTerminal "<<it->value<<" has follow :\n ";
-//        for(auto itr : it->follow ){
-//            cout<<itr.first<<" map to: ";
-//            for(auto itr2 : itr.second){
-//                cout<<itr2->value;
-//            }cout<<"\n";
-//        }cout<<"\n";
-//    }
-
-
-
-//    cout <<"-------************************----"<<endl;
-//    int i=1;
-//    for(auto it : m){
-//        cout <<i++<<" - "<<it->temp<<endl;
-//        cout <<it->value<<" == "<<it->value<<endl;
-//        vector< vector< production *> > RHS=it->RHS;
-//        cout <<"size = " <<RHS.size() <<endl;
-//        for(int i=0;i<RHS.size();i++){
-//            for(int j=0;j<RHS[i].size();j++){
-//                cout<<RHS[i][j]->value<<"----";
-//            }
-//            cout <<endl;
-//        }
-//        cout <<"eps == "<<it->eps<<endl;
-//        cout <<"-----------"<<endl;
-//    }
-
-//    cout <<"-------&&&&&&&&&&&&&&&&&&&&&&&&&*=------"<<endl;
-//    for(auto it : m){
-//        cout<<"nonTerminal "<<it->value<<" appeared in  :\n ";
-//        for(auto itr : it->appearance ){
-//            cout<<itr->value<<" ";
-//        }cout<<"\n";
-//    }
-
-    //read the test program
-/*    ReadProg *read=ReadProg::getInstance();
-    const string word;
-//    fstream file=read->openFile("TestProgram.txt");
-    fstream file;
-    string fileName="TestProgram.txt";
-    file.open(fileName.c_str());
-    vector< pair<string, string>> *tokens = read->ReadProgFile(file, word, dfa);
-    ofstream opfile;
-    opfile.open("output.txt");
-    while(tokens!=NULL){
-        for(const pair<string, string>&token : *tokens){
-            cout <<token.PrFirst<<" --> "<<token.second << "\n";
-            opfile << token.second<<"\n";
+    for (auto it : symtable) {
+        cout << it.first.first->value << ": " << it.first.second << ": ";
+        for (auto itr : it.second) {
+            cout << itr->value;
         }
-        tokens = read->ReadProgFile(file, word, dfa);
+        cout << "\n";
     }
-    opfile.close();
-    file.close();
-    //print the output file
-//    ofstream opfile;
-//    opfile.open("output.txt");
-//    for(const pair<string, string>&token : token){
-//        cout <<token.PrFirst<<" --> "<<token.second << "\n";
-//        opfile << token.second<<"\n";
-//    }
-//    opfile.close();
-*/
+    cout << "----------------------\n";
+    cout << "----------------------\n";
+    if (table->isAmbiguity()) {
+        cout << "Ambiguous Grammar\n";
+    } else
+        table->getOutput(queue, m[0]);
+
+
     return 0;
 }

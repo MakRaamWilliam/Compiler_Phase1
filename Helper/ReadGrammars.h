@@ -6,6 +6,7 @@
 #include <regex>
 #include <algorithm>
 #include "production.h"
+
 using namespace std;
 
 class ReadGrammars {
@@ -13,16 +14,17 @@ class ReadGrammars {
 public:
     virtual ~ReadGrammars() = default;
 
-//    map<string, production *> ReadGrammarFile(const string &grammerfile);
+
     vector<production *> ReadGrammarFile(const string &grammerfile);
-//    void makeTransTable(const string &fileName, const map<Node *, map<char, Node *>> &table, const set<char> &alpha);
+
+    vector<production *> parseGrammar(vector<pair<string, string> > lines);
 
     static ReadGrammars *getInstance();
 
 
-
 private:
     regex form;
+    regex theRest;
     smatch match;
 
 private:
@@ -30,28 +32,18 @@ private:
 
     ReadGrammars();
 
-    static vector< vector< production *> >  split(const string &str,production *t,map<string, production *> &nonterminals,map<string, production *> &terminals);
-    static production* findNonTerminalRHS(string name, map<string, production *> &nonterminals, production *t);
-    static production* findNonTerminalLHS(string name, map<string, production *> &nonterminals);
-    static production* findTerminal(const string &name,map<string, production *> &terminals);
+    static vector<vector<production *> >
+    split(const string &str, production *t, map<string, production *> &nonterminals,
+          map<string, production *> &terminals);
+
+    static production *findNonTerminalRHS(string name, map<string, production *> &nonterminals, production *t);
+
+    static production *findNonTerminalLHS(string name, map<string, production *> &nonterminals);
+
+    static production *findTerminal(const string &name, map<string, production *> &terminals);
 
     static string removeSpaces(string str);
-//
-//    static vector<string> splitSpaces(string splitted);
-//
-
-//
-//    static vector<string> split(const string &str);
-//
-//    static vector<string> splitExpression(const string &str);
-//
-//    static vector<string> splitEachChar(const string &str);
-
-
-
-
-
 
 };
 
-#endif //PHASE1_READGRAMMARS_H
+#endif
