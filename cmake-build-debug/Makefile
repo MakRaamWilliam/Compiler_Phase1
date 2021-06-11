@@ -66,10 +66,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2"
+CMAKE_SOURCE_DIR = "C:\Users\EL NADER\Desktop\Compiler_project-main"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\EL NADER\Desktop\Compiler_project-main\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug\CMakeFiles" "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\EL NADER\Desktop\Compiler_project-main\cmake-build-debug\CMakeFiles" "C:\Users\EL NADER\Desktop\Compiler_project-main\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\EL NADER\Desktop\Compiler_Phase1-makrm2\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\EL NADER\Desktop\Compiler_project-main\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -465,33 +465,6 @@ Helper/ReadRules.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/ReadRules.cpp.s
 .PHONY : Helper/ReadRules.cpp.s
 
-Helper/nonTerminal.obj: Helper/nonTerminal.cpp.obj
-
-.PHONY : Helper/nonTerminal.obj
-
-# target to build an object file
-Helper/nonTerminal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.obj
-.PHONY : Helper/nonTerminal.cpp.obj
-
-Helper/nonTerminal.i: Helper/nonTerminal.cpp.i
-
-.PHONY : Helper/nonTerminal.i
-
-# target to preprocess a source file
-Helper/nonTerminal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.i
-.PHONY : Helper/nonTerminal.cpp.i
-
-Helper/nonTerminal.s: Helper/nonTerminal.cpp.s
-
-.PHONY : Helper/nonTerminal.s
-
-# target to generate assembly for a file
-Helper/nonTerminal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Phase1.dir\build.make CMakeFiles/Phase1.dir/Helper/nonTerminal.cpp.s
-.PHONY : Helper/nonTerminal.cpp.s
-
 Helper/production.obj: Helper/production.cpp.obj
 
 .PHONY : Helper/production.obj
@@ -591,9 +564,6 @@ help:
 	@echo ... Helper/ReadRules.obj
 	@echo ... Helper/ReadRules.i
 	@echo ... Helper/ReadRules.s
-	@echo ... Helper/nonTerminal.obj
-	@echo ... Helper/nonTerminal.i
-	@echo ... Helper/nonTerminal.s
 	@echo ... Helper/production.obj
 	@echo ... Helper/production.i
 	@echo ... Helper/production.s
