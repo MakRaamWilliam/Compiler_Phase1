@@ -1,3 +1,0 @@
-p1 : do
-p2 : a-z|A-Z
-p3 : double
